@@ -39,7 +39,133 @@ There were several columns with NAN values, to deal with this I dropped many of 
 Further l exploratory analysis confirmed that there were no duplicates, and the remaining missing values before being removed constituted approximately 2.5% these were also generally data points that represent wind parks in the planning or construction phase and have not yet been commissioned.
 From the Data cleaning and exploration I have learned that the offshore industrial zone has its own column but I can also consider this as an additional state for the purposes of this case study. This greatly reduced the number of NANs and missing data in the State, ClusterNordsee, and ClusterOstsee Columns.</p>
 
-   
+<section>
+            <h2>Step 2: Exploring Correlations</h2>   
+</p>Strong Correlations
+Gross performance, Net rated power, Hub Height, and Rotor Diameter have very strong correlations which makes sense, as the turbine technology improves the turbines have been getting taller, their blades getting longer, and their power outputs have been increasing. with relation to Rotor Diameter, I can see this very well. it is worth noting here that net rated power and gross output are the same and that is why I have a 1-1 correlation.
+with hub height and power, I see a very strong correlation, this makes sense as the larger the blades are the more wind they can catch and the more power they can generate.
+with hub height and rotor diameter, I also see a strong correlation which also makes sense as the longer the blades get the higher you need to build the turbine. I don't want blades hitting the ground and I also want to keep the blades in the wind.
+I can also see a correlation between water depth and distance from the coastline which makes sense, as the further you go from land the deeper the water gets.
+Weak Correlations
+when it comes to the offshore sector. I see weak correlations because this does not determine the type of turbine that is built. As the technology improves the biggest and the best will be built. given that some turbines can be built to float the water depth and distance from the coastline really should have much impact. water depth and distance from the coastline also have weak correlations and would have very little to do with the type of turbine built as the water line is the water line and the metrics I have are ultimately determined by that. I can say that the the deeper the water and the further away from the coastline does not correlate to larger more powerful turbines.
+Conclusion
+the improvement of technology is represented by the growth in power output and the strong correlating increase in Rotor diameter and hub height. As the turbines become more powerful the blades get longer and the towers get taller. the turbines being built offshore does not impact the improved power and size of the turbines and I can see this in the weak correlation. with water depth and distance from shore.
 
+I learned that there is a very weak correlation between the physical dimensions and power rating vs the water depth and distance from the coastline. This makes sense as the type design of turbines isn’t affected by whether it is onshore or offshore. </p>
+
+
+    
+<section>
+            <h2>Step 3: Linear Regression</h2>
+</P>“As turbines Improve over time their dimensions and output increase.”
+This was the hypothesis i wanted to test, i using a simple regression method. I used test and training subsets of data to determine the relationships between the various dimensions of turbines.
+I can see there is a very strong correlation between Hub Height and rotor diameter vs Gross Performance, As the power increases so does the Rotor Diameter and Hub Height. there are a few outliers however these could be between wind parks that still need to be built or prototypes, which may be listed as 0.
+When comparing these 3 aspects I can see that they all follow a very similar pattern. This is going to be important to predict the size and power of future turbines.
+
+This will make it much easier to map out future potential locations for wind farms, ultimately earmarking locations for projects before they are conceptualized and helping the planning of infrastructure.
+
+It will be quite interesting to see how the clustering performs.
+
+When Looking at the graph I notice that I could extrapolate and predict the future dimensions of turbines as there is a nice linear pattern and relations ship between Gross performance, Rotor Diameter, and Hub Height. In future iterations, I would like to include a Predictive model and over time test it against existing theoretical and prototype Turbine Models Types. </p>
+    
+
+
+
+<section>
+            <h2>Step 4: Clustering</h2>    
+</p>I used machine learning algorithms to perform k-means clustering on the data. Based on the results from the elbow method for optimal k i chose 4 clusters. Given the high correlations between the physical aspects of the turbines i did not need to standardise the information.
+
+
+The clustering analysis between rotor diameter and gross performance has yielded insightful results, illuminating distinct patterns and relationships within the data. Through the application of clustering algorithms, I have successfully identified meaningful groupings or clusters based on the inherent characteristics of rotor diameter and gross performance. This segmentation allows us to discern clear trends and variations in the dataset, providing valuable insights into the underlying structure of the data. By uncovering these clusters, I gain a deeper understanding of how rotor diameter and gross performance interact and influence each other within the context of our analysis.
+
+The success of the 3D clustering analysis between gross performance, rotor diameter, and hub height is evident in its ability to reveal multidimensional relationships and patterns within wind turbine data. By integrating these critical parameters into a cohesive analysis framework, clustering algorithms effectively segment the data into distinct clusters based on shared characteristics. Beyond segmentation, this analysis fosters deeper insights into the interactions between performance metrics and design attributes, informing decisions regarding turbine design, siting, and operational strategies.
+
+Similar to the insights gained from Linear regression, I would like to create a predictive model and then compare that to upcoming Theoretical and Prototype Turbine Model Types.
+
+Interpretation:
+•	Gross Performance and Net Rated Power: These two features seem to have relatively high mean and median values in the Blue cluster compared to oth-er clusters. The mean and median values for the Green cluster are slightly lower, followed by the Red cluster, and then the Orange cluster, which has the lowest values.
+•	Hub Height and Rotor Diameter: The mean and median values for Hub Height and Rotor Diameter also vary across clusters. The Blue cluster tends to have higher values for both features compared to other clusters. The Green cluster follows with slightly lower values, then the Red cluster, and fi-nally the Orange cluster with the lowest values.
+Cluster Characteristics:
+Based on the mean and median values, I can infer certain characteristics of each cluster:
+•	Blue Cluster: This cluster appears to have the highest values for Gross Per-formance, Net Rated Power, Hub Height, and Rotor Diameter among all clus-ters, indicating that it may represent wind turbines with higher performance and larger physical dimensions.
+•	Green Cluster: This cluster has slightly lower values compared to the Blue cluster but higher than the Red and Orange clusters, suggesting moderate performance and dimensions.
+•	Red Cluster: The Red cluster has lower values for all features compared to the Blue and Green clusters, indicating lower performance and smaller phys-ical dimensions.
+•	Orange Cluster: This cluster has the lowest values for all features, suggest-ing the lowest performance and smallest physical dimensions among all clusters.
+over all i would say this model has been succesfull at learning and clustering our data. the data is inline with all our previous analysis and has provided some valua-ble insights. </p>
+    
+<section>
+            <h2>Step 5: Time Series</h2>    
+</p>The time series of rotor diameter is crucial in wind turbine analysis as it directly influences turbine performance, efficiency, and maintenance requirements. Understanding its trends and variations aids in optimizing turbine design, predicting energy output, and implementing effective maintenance schedules, ultimately maximizing the operational efficiency and longevity of wind energy systems.
+
+There is a clear upward trend for rotor diameter there is a very nice upward trend line. there are some dips here and there but generally around times where there were siginifcant changes in the economy or society such as 2008 where there was a financial crash.
+
+Stationarizing the time series data of rotor diameter using the Dickey-Fuller method is pivotal for extracting meaningful insights and improving forecasting accuracy. By transforming the non-stationary rotor diameter time series into a stationary one, this process facilitates clearer identification of underlying patterns and relationships within the data. The success of stationarizing lies in its ability to stabilize statistical properties like mean and variance over time, achieved by removing trends and seasonality. The Dickey-Fuller test serves as a reliable diagnostic tool, confirming the stationarity of the series when the null hypothesis, indicating a unit root and non-stationarity, is rejected. Overall, stationarizing the rotor diameter time series enhances the reliability of subsequent analyses, enabling more accurate modeling and forecasting of future rotor diameter trends. 
+Typically, if the p-value is less than a chosen significance level (such as 0.05), you reject the null hypothesis and conclude that the time series is stationary. In this case, the p-value is approximately 0.962239, which is greater than 0.05. Therefore, I fail to reject the null hypothesis, indicating that there is insufficient evidence to conclude that the time series is stationary.
+Here I can see the success of the dicky fuller test in stationorising the time series.
+Autocorrelation
+•	First test, The vertical lines represent the lags in the series, while the blue ar-ea represents the confidence interval. When lines go above the blue edge of the confidence interval, this means the lags are significantly correlated with each other. I have many lags beyond this interval and can deduce that this data is non-stationary.
+•	Second test, things have improved a lot here, but it’s still not perfect. This means that, despite the Dickey-Fuller test saying that data is stationary, that stationarity is more acceptable but still weak. there are only 4 lags that are not within the confidence area.
+Conclusion
+For all the time series that I tested I can reject the null hypothese and consider the time series as non stationary. Based on the interpretation of the Dickey-Fuller test results, where the test statistic is not significantly low and the p-value is greater than common significance levels like 0.05 or 0.01, I cannot reject the null hypothesis. Therefore, I conclude that the data is likely non-stationary, indicating the presence of a trend or seasonality. The autocorrelation confirms this.
+After stationarizing a time series and observing less than 5 nodes outside the spread, it suggests a strong autocorrelation pattern within the data. This indicates that the values in the time series are highly correlated with their past values, which is a common characteristic of stationary time series data. With fewer than 5 nodes outside the spread, it implies that the majority of the data points closely adhere to the autocorrelation structure, indicating a stable and predictable behaviour over time. This could be advantageous for forecasting and modeling purposes, as it suggests that past values can reliably inform future trends within the time series.
+I was not Surprised by the results of the time series analysis, in relation to previous steps in this analysis I can see a clear pattern of increase in all dimensions over time. The Rotor Diameter has the Most linear and predictable trend of all the dimen-sions. This would be a great start for predictive modeling and forecasting.</p>
+
+    
+
+<section>
+            <h2>Step 6: Geospatial</h2>    
+</p>Given that wind farms require quite alot of space, it is important that I consider where and who is building the turbines. In this section i wanted to look at the areas with the highest production and the top manufacturers responsible for that production. In this section I will look at the top 3 manufacturesres as they all useslighlty different strategies.
+Top 10 Manufacturers by State
+From the previous analytic steps I can see and confirm that the top 3 states are Niedersachsen, Schleswig-Holstein, and Brandenburg. I also have the offshore sector which actually comes in second if I consider it as a state
+
+Enercon Locations
+Given that Enercon has so many smaller installations it's no surprise that I see such a densely populated Choropleth. I notice that Enercon does not have any offshore windparks which is interesting.
+
+
+
+
+
+
+Vestas Locations
+Vestas has a mix of sizes at their locations. I see that they have very good land coverage but they also have offshore installations. They are very Ill spread across the country and surrounding sea.
+
+
+
+
+
+
+Siemens Locations
+Siemens has by far the fewest locations which corresponds with our previous analytical steps. They have a few massive installations however it seems their main business is building these windparks offshore.
+
+
+
+
+
+When looking at this box and whisker plot I can see that Enercon has mainly smaller installation with a few outliers of large wind parks. Vestas has slightly more spread with most of its windparks in the medium sized category. When I look at siemens I can see that they generally have massive installation which makes sense as most off shore wind park are huge. Given that siemens is mostly responsible for offshore wind parks this would make sense.
+I found the results to be Surprising, Smaller installations at a higher frequency are more effective at producing a greater cumulative power capacity, this would also have major benefits for transmission of power as the electricity doesn’t need to travel large distances to where it is needed. Building the production close to where it is needed is clearly a preferable method of producing power.
+</p>
+
+
+
+<section>
+            <h2>Further Research</h2>    
+</p>It would be nice if I could include meteorological data so I could see where the highest and most consistent sites are for wind turbines and compare that to the current infrastructure.
+Combining the two and then conducting a time series analysis to see how or if the weather patterns change would be an interesting theory to test.
+</p><section>
+    
+            <h2>Retrospective</h2>    
+</p>There are some skills I will definitely need to develop for the Further research of this project. Some of the main challenges I have are linking the dynamic meteorological data to the cumulative geospatial aspects. It will be very interesting trying to map the growth in height in turbines, the rotor diameter, and the gross output (the power being extracted from the wind) against the Meteorological conditions to see if there are any changes in local and regional climatic conditions will be challenging, I am quite excited to develop these skills and share the results in the near future. Perhaps I will notice a change in weather patterns one the physical dimensions or physical dimensions reach a certain point or a combination of these aspects. Perhaps I will see a change when a certain density of these aspects is reached.</p>
+
+    <section>
+            <h2>Conclusions</h2>    
+</p>The data I've explored paints a compelling picture of the ongoing evolution in wind turbine technology, with a clear trend towards larger physical dimensions and increased power output. The analysis of rotor diameter, hub height, and net rated power reveals a notable upward trajectory over time, suggesting a concerted effort within the industry to enhance turbine efficiency and performance. This trend underscores a broader commitment to harnessing renewable energy resources more effectively, as larger turbines with higher power capacities have the potential to generate greater electricity yields while maximizing land and resource utilization. As technology continues to advance and economies of scale drive further innovation, I anticipate this trend towards larger and more powerful turbines to persist, signaling a promising future for the continued growth and sustainability of wind energy.</p>
+
+        <section>
+            <h2>Reflections</h2>    
+</p>During this analysis, I encountered several challenges that required careful navigation and problem-solving. One notable issue was the handling of non-stationary time series data, particularly in relation to rotor diameter trends. Stationarizing the data using the Dickey-Fuller method proved crucial but required attention to detail and an understanding of the underlying statistical concepts. Additionally, managing the visualization and interpretation of multidimensional data, such as clustering between rotor diameter, hub height, and gross performance, presented complexities in conveying insights effectively. Despite these challenges, each hurdle served as an opportunity for growth and learning, ultimately enhancing my analytical skills and proficiency in wind turbine analysis.</p>    
+
+        <section>
+            <h2>The Future of the Industry</h2>    
+</p>Looking ahead, the future of the wind energy industry holds immense promise, propelled by advancements in technology and a growing commitment to sustainability. Integrating meteorological data, especially wind speed information, into our analyses provides invaluable insights into turbine performance and energy production. By considering environmental factors alongside turbine specifications, I can optimize siting decisions, improve operational efficiency, and enhance forecasting accuracy. This holistic approach not only fosters a deeper understanding of wind energy dynamics but also paves the way for more robust and resilient energy systems. As the industry continues to innovate and adapt to evolving challenges, the integration of meteorological data stands poised to play a pivotal role in shaping the future trajectory of wind energy, driving progress towards a more sustainable and renewable energy landscape.</p>             
 
 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
