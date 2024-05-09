@@ -6,7 +6,7 @@
 -
  -
 
-### Work Experience
+## Work Experience
 **Picot and Moss (TAG Heuer)**
  -
  -
@@ -29,7 +29,7 @@
  -
  -
 
-### Projects
+## Projects
 **GameCo**
  -
  -
