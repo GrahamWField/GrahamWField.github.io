@@ -6,7 +6,6 @@
 *
 
 ### Work Experience
-
 **Picot and Moss (TAG Heuer)**
 *
 *
