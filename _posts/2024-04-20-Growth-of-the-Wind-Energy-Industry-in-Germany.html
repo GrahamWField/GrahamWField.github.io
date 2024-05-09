@@ -120,43 +120,26 @@ From the Data cleaning and exploration I have learned that the offshore industri
     <p>For all the time series that I tested, I can reject the null hypothesis and consider the time series as non-stationary. Based on the interpretation of the Dickey-Fuller test results, where the test statistic is not significantly low and the p-value is greater than common significance levels like 0.05 or 0.01, I cannot reject the null hypothesis. Therefore, I conclude that the data is likely non-stationary, indicating the presence of a trend or seasonality. The autocorrelation confirms this.</p>
     <p>After stationarizing a time series and observing less than 5 nodes outside the spread, it suggests a strong autocorrelation pattern within the data. This indicates that the values in the time series are highly correlated with their past values, which is a common characteristic of stationary time series data. With fewer than 5 nodes outside the spread, it implies that the majority of the data points closely adhere to the autocorrelation structure, indicating a stable and predictable behavior over time. This could be advantageous for forecasting and modeling purposes, as it suggests that past values can reliably inform future trends within the time series.</p>
     <p>I was not surprised by the results of the time series analysis. In relation to previous steps in this analysis, I can see a clear pattern of increase in all dimensions over time. The Rotor Diameter has the most linear and predictable trend of all the dimensions. This would be a great start for predictive modeling and forecasting.</p>
-</section>
-
-            <h2>Step 6: Geospatial</h2>    
-</p>Given that wind farms require quite alot of space, it is important that I consider where and who is building the turbines. In this section i wanted to look at the areas with the highest production and the top manufacturers responsible for that production. In this section I will look at the top 3 manufacturesres as they all useslighlty different strategies.
-Top 10 Manufacturers by State
-From the previous analytic steps I can see and confirm that the top 3 states are Niedersachsen, Schleswig-Holstein, and Brandenburg. I also have the offshore sector which actually comes in second if I consider it as a state
-
-Enercon Locations
-Given that Enercon has so many smaller installations it's no surprise that I see such a densely populated Choropleth. I notice that Enercon does not have any offshore windparks which is interesting.
-
-
-
-
-
-
-Vestas Locations
-Vestas has a mix of sizes at their locations. I see that they have very good land coverage but they also have offshore installations. They are very Ill spread across the country and surrounding sea.
-
-
-
-
-
-
-Siemens Locations
-Siemens has by far the fewest locations which corresponds with our previous analytical steps. They have a few massive installations however it seems their main business is building these windparks offshore.
-
-
-
-
-
-When looking at this box and whisker plot I can see that Enercon has mainly smaller installation with a few outliers of large wind parks. Vestas has slightly more spread with most of its windparks in the medium sized category. When I look at siemens I can see that they generally have massive installation which makes sense as most off shore wind park are huge. Given that siemens is mostly responsible for offshore wind parks this would make sense.
-I found the results to be Surprising, Smaller installations at a higher frequency are more effective at producing a greater cumulative power capacity, this would also have major benefits for transmission of power as the electricity doesn’t need to travel large distances to where it is needed. Building the production close to where it is needed is clearly a preferable method of producing power.
-</p>
-
-
 
 <section>
+    <h2>Step 6: Geospatial</h2>
+    <p>Given that wind farms require quite a lot of space, it is important that I consider where and who is building the turbines. In this section, I wanted to look at the areas with the highest production and the top manufacturers responsible for that production. In this section, I will look at the top 3 manufacturers as they all use slightly different strategies.</p>
+    <h3>Top 10 Manufacturers by State</h3>
+    <p>From the previous analytic steps, I can see and confirm that the top 3 states are Niedersachsen, Schleswig-Holstein, and Brandenburg. I also have the offshore sector which actually comes in second if I consider it as a state.</p>
+    <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Wind Turbine Pics/11 Gross production by state.png" alt="Manufacturer by state">  
+  <h4>Enercon Locations</h4>
+    <p>Given that Enercon has so many smaller installations, it's no surprise that I see such a densely populated Choropleth. I notice that Enercon does not have any offshore wind parks which is interesting.</p>
+<img style="float: left; margin-right: 15px; width: 350px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Wind Turbine Pics/12 Enerecon turbines.png" alt="Enercon Locations">    
+  <h4>Vestas Locations</h4>
+    <p>Vestas has a mix of sizes at their locations. I see that they have very good land coverage but they also have offshore installations. They are very well spread across the country and surrounding sea.</p>
+    <img style="float: left; margin-right: 15px; width: 350px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Wind Turbine Pics/13 Vestas Turbines.png" alt="Vestas Locations"> 
+  <h4>Siemens Locations</h4>
+    <p>Siemens has by far the fewest locations which corresponds with our previous analytical steps. They have a few massive installations however it seems their main business is building these wind parks offshore.</p>
+   <img style="float: left; margin-right: 15px; width: 350px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Wind Turbine Pics/14 Siemens turbines.png" alt="Siemens Locations"> 
+  <p>When looking at this box and whisker plot I can see that Enercon has mainly smaller installation with a few outliers of large wind parks. Vestas has slightly more spread with most of its wind parks in the medium sized category. When I look at Siemens I can see that they generally have massive installation which makes sense as most offshore wind parks are huge. Given that Siemens is mostly responsible for offshore wind parks this would make sense.</p>
+    <p>I found the results to be surprising. Smaller installations at a higher frequency are more effective at producing a greater cumulative power capacity, this would also have major benefits for transmission of power as the electricity doesn’t need to travel large distances to where it is needed. Building the production close to where it is needed is clearly a preferable method of producing power.</p>
+</section>
+
             <h2>Further Research</h2>    
 </p>It would be nice if I could include meteorological data so I could see where the highest and most consistent sites are for wind turbines and compare that to the current infrastructure.
 Combining the two and then conducting a time series analysis to see how or if the weather patterns change would be an interesting theory to test.
