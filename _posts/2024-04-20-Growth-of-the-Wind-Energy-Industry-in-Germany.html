@@ -72,30 +72,28 @@ From the Data cleaning and exploration I have learned that the offshore industri
     <p>When looking at the graph, I notice that I could extrapolate and predict the future dimensions of turbines as there is a nice linear pattern and relationship between Gross performance, Rotor Diameter, and Hub Height. In future iterations, I would like to include a Predictive model and over time test it against existing theoretical and prototype Turbine Models Types.</p>
    <p>It will be quite interesting to see how the clustering performs.</p>
     </p>
+<section>
+    <h2>Step 4: Clustering</h2>
+    <p>I used machine learning algorithms to perform k-means clustering on the data. Based on the results from the elbow method for optimal k, I chose 4 clusters. Given the high correlations between the physical aspects of the turbines, I did not need to standardize the information.</p>
+    <p>The clustering analysis between rotor diameter and gross performance has yielded insightful results, illuminating distinct patterns and relationships within the data. Through the application of clustering algorithms, I have successfully identified meaningful groupings or clusters based on the inherent characteristics of rotor diameter and gross performance. This segmentation allows us to discern clear trends and variations in the dataset, providing valuable insights into the underlying structure of the data. By uncovering these clusters, I gain a deeper understanding of how rotor diameter and gross performance interact and influence each other within the context of our analysis.</p>
+    <p>The success of the 3D clustering analysis between gross performance, rotor diameter, and hub height is evident in its ability to reveal multidimensional relationships and patterns within wind turbine data. By integrating these critical parameters into a cohesive analysis framework, clustering algorithms effectively segment the data into distinct clusters based on shared characteristics. Beyond segmentation, this analysis fosters deeper insights into the interactions between performance metrics and design attributes, informing decisions regarding turbine design, siting, and operational strategies.</p>
+    <p>Similar to the insights gained from Linear regression, I would like to create a predictive model and then compare that to upcoming Theoretical and Prototype Turbine Model Types.</p>
+    <h3>Interpretation:</h3>
+    <ul>
+        <li>Gross Performance and Net Rated Power: These two features seem to have relatively high mean and median values in the Blue cluster compared to other clusters. The mean and median values for the Green cluster are slightly lower, followed by the Red cluster, and then the Orange cluster, which has the lowest values.</li>
+        <li>Hub Height and Rotor Diameter: The mean and median values for Hub Height and Rotor Diameter also vary across clusters. The Blue cluster tends to have higher values for both features compared to other clusters. The Green cluster follows with slightly lower values, then the Red cluster, and finally the Orange cluster with the lowest values.</li>
+    </ul>
+    <h3>Cluster Characteristics:</h3>
+    <p>Based on the mean and median values, I can infer certain characteristics of each cluster:</p>
+    <ul>
+        <li>Blue Cluster: This cluster appears to have the highest values for Gross Performance, Net Rated Power, Hub Height, and Rotor Diameter among all clusters, indicating that it may represent wind turbines with higher performance and larger physical dimensions.</li>
+        <li>Green Cluster: This cluster has slightly lower values compared to the Blue cluster but higher than the Red and Orange clusters, suggesting moderate performance and dimensions.</li>
+        <li>Red Cluster: The Red cluster has lower values for all features compared to the Blue and Green clusters, indicating lower performance and smaller physical dimensions.</li>
+        <li>Orange Cluster: This cluster has the lowest values for all features, suggesting the lowest performance and smallest physical dimensions among all clusters.</li>
+    </ul>
+    <p>Overall, I would say this model has been successful at learning and clustering our data. The data is in line with all our previous analysis and has provided some valuable insights.</p>
 </section>
 
-            <h2>Step 4: Clustering</h2>    
-</p>I used machine learning algorithms to perform k-means clustering on the data. Based on the results from the elbow method for optimal k i chose 4 clusters. Given the high correlations between the physical aspects of the turbines i did not need to standardise the information.
-
-
-The clustering analysis between rotor diameter and gross performance has yielded insightful results, illuminating distinct patterns and relationships within the data. Through the application of clustering algorithms, I have successfully identified meaningful groupings or clusters based on the inherent characteristics of rotor diameter and gross performance. This segmentation allows us to discern clear trends and variations in the dataset, providing valuable insights into the underlying structure of the data. By uncovering these clusters, I gain a deeper understanding of how rotor diameter and gross performance interact and influence each other within the context of our analysis.
-
-The success of the 3D clustering analysis between gross performance, rotor diameter, and hub height is evident in its ability to reveal multidimensional relationships and patterns within wind turbine data. By integrating these critical parameters into a cohesive analysis framework, clustering algorithms effectively segment the data into distinct clusters based on shared characteristics. Beyond segmentation, this analysis fosters deeper insights into the interactions between performance metrics and design attributes, informing decisions regarding turbine design, siting, and operational strategies.
-
-Similar to the insights gained from Linear regression, I would like to create a predictive model and then compare that to upcoming Theoretical and Prototype Turbine Model Types.
-
-Interpretation:
-•	Gross Performance and Net Rated Power: These two features seem to have relatively high mean and median values in the Blue cluster compared to oth-er clusters. The mean and median values for the Green cluster are slightly lower, followed by the Red cluster, and then the Orange cluster, which has the lowest values.
-•	Hub Height and Rotor Diameter: The mean and median values for Hub Height and Rotor Diameter also vary across clusters. The Blue cluster tends to have higher values for both features compared to other clusters. The Green cluster follows with slightly lower values, then the Red cluster, and fi-nally the Orange cluster with the lowest values.
-Cluster Characteristics:
-Based on the mean and median values, I can infer certain characteristics of each cluster:
-•	Blue Cluster: This cluster appears to have the highest values for Gross Per-formance, Net Rated Power, Hub Height, and Rotor Diameter among all clus-ters, indicating that it may represent wind turbines with higher performance and larger physical dimensions.
-•	Green Cluster: This cluster has slightly lower values compared to the Blue cluster but higher than the Red and Orange clusters, suggesting moderate performance and dimensions.
-•	Red Cluster: The Red cluster has lower values for all features compared to the Blue and Green clusters, indicating lower performance and smaller phys-ical dimensions.
-•	Orange Cluster: This cluster has the lowest values for all features, suggest-ing the lowest performance and smallest physical dimensions among all clusters.
-over all i would say this model has been succesfull at learning and clustering our data. the data is inline with all our previous analysis and has provided some valua-ble insights. </p>
-    
-<section>
             <h2>Step 5: Time Series</h2>    
 </p>The time series of rotor diameter is crucial in wind turbine analysis as it directly influences turbine performance, efficiency, and maintenance requirements. Understanding its trends and variations aids in optimizing turbine design, predicting energy output, and implementing effective maintenance schedules, ultimately maximizing the operational efficiency and longevity of wind energy systems.
 
