@@ -63,24 +63,16 @@ From the Data cleaning and exploration I have learned that the offshore industri
         I learned that there is a very weak correlation between the physical dimensions and power rating vs the water depth and distance from the coastline. This makes sense as the type design of turbines isn’t affected by whether it is onshore or offshore.
     </p>
     
+<section>
+    <h2>Step 3: Linear Regression</h2>
+    <p>“As turbines improve over time, their dimensions and output increase.” This was the hypothesis I wanted to test, using a simple regression method. I used test and training subsets of data to determine the relationships between the various dimensions of turbines.</p>
+    <p>I can see there is a very strong correlation between Hub Height and rotor diameter vs Gross Performance. As the power increases, so does the Rotor Diameter and Hub Height. There are a few outliers; however, these could be between wind parks that still need to be built or prototypes, which may be listed as 0. When comparing these 3 aspects, I can see that they all follow a very similar pattern. This is going to be important to predict the size and power of future turbines.</p>
+    <p>This will make it much easier to map out future potential locations for wind farms, ultimately earmarking locations for projects before they are conceptualized and helping the planning of infrastructure.</p>
+    <p>It will be quite interesting to see how the clustering performs.</p>
+<img style="float: right; margin-left: 15px; width: 350px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Wind Turbine Pics/2 Linear.png" alt="Linear Regression">
+    <p>When looking at the graph, I notice that I could extrapolate and predict the future dimensions of turbines as there is a nice linear pattern and relationship between Gross performance, Rotor Diameter, and Hub Height. In future iterations, I would like to include a Predictive model and over time test it against existing theoretical and prototype Turbine Models Types.</p>
 </section>
 
-            <h2>Step 3: Linear Regression</h2>
-</P>“As turbines Improve over time their dimensions and output increase.”
-This was the hypothesis i wanted to test, i using a simple regression method. I used test and training subsets of data to determine the relationships between the various dimensions of turbines.
-I can see there is a very strong correlation between Hub Height and rotor diameter vs Gross Performance, As the power increases so does the Rotor Diameter and Hub Height. there are a few outliers however these could be between wind parks that still need to be built or prototypes, which may be listed as 0.
-When comparing these 3 aspects I can see that they all follow a very similar pattern. This is going to be important to predict the size and power of future turbines.
-
-This will make it much easier to map out future potential locations for wind farms, ultimately earmarking locations for projects before they are conceptualized and helping the planning of infrastructure.
-
-It will be quite interesting to see how the clustering performs.
-
-When Looking at the graph I notice that I could extrapolate and predict the future dimensions of turbines as there is a nice linear pattern and relations ship between Gross performance, Rotor Diameter, and Hub Height. In future iterations, I would like to include a Predictive model and over time test it against existing theoretical and prototype Turbine Models Types. </p>
-    
-
-
-
-<section>
             <h2>Step 4: Clustering</h2>    
 </p>I used machine learning algorithms to perform k-means clustering on the data. Based on the results from the elbow method for optimal k i chose 4 clusters. Given the high correlations between the physical aspects of the turbines i did not need to standardise the information.
 
