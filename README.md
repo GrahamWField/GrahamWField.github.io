@@ -1,27 +1,27 @@
 # Certified Data Analyst
 #### Technical Skills: Python, SQL, Excel, Data Visualisation, Tableau
-###Education
+### Education
 *
 *
 *
 
 ### Work Experience
 
-** Picot and Moss (TAG Heuer)
+**Picot and Moss (TAG Heuer)**
 *
 *
 *
 *
 *
 
-** Urban Fresh
+**Urban Fresh**
 *
 *
 *
 *
 *
 
-**Rotorworks
+**Rotorworks**
 *
 *
 *
