@@ -44,22 +44,26 @@ From the Data cleaning and exploration I have learned that the offshore industri
 <img style="float: left; margin-right: 15px; border: 5px solid #555" class="img-fluid" src="img/posts/Wind Turbine Pics/0.1 Data.png"alt="Missing Values in Python">
     
 <section>
-            <h2>Step 2: Exploring Correlations</h2>   
-</p>Strong Correlations
-Gross performance, Net rated power, Hub Height, and Rotor Diameter have very strong correlations which makes sense, as the turbine technology improves the turbines have been getting taller, their blades getting longer, and their power outputs have been increasing. with relation to Rotor Diameter, I can see this very well. it is worth noting here that net rated power and gross output are the same and that is why I have a 1-1 correlation.
-with hub height and power, I see a very strong correlation, this makes sense as the larger the blades are the more wind they can catch and the more power they can generate.
-with hub height and rotor diameter, I also see a strong correlation which also makes sense as the longer the blades get the higher you need to build the turbine. I don't want blades hitting the ground and I also want to keep the blades in the wind.
-I can also see a correlation between water depth and distance from the coastline which makes sense, as the further you go from land the deeper the water gets.
-Weak Correlations
-when it comes to the offshore sector. I see weak correlations because this does not determine the type of turbine that is built. As the technology improves the biggest and the best will be built. given that some turbines can be built to float the water depth and distance from the coastline really should have much impact. water depth and distance from the coastline also have weak correlations and would have very little to do with the type of turbine built as the water line is the water line and the metrics I have are ultimately determined by that. I can say that the the deeper the water and the further away from the coastline does not correlate to larger more powerful turbines.
-Conclusion
-the improvement of technology is represented by the growth in power output and the strong correlating increase in Rotor diameter and hub height. As the turbines become more powerful the blades get longer and the towers get taller. the turbines being built offshore does not impact the improved power and size of the turbines and I can see this in the weak correlation. with water depth and distance from shore.
+    <h2>Step 2: Exploring Correlations</h2>
+    <p>
+        <strong>Strong Correlations</strong><br>
+        Gross performance, Net rated power, Hub Height, and Rotor Diameter have very strong correlations which makes sense, as the turbine technology improves the turbines have been getting taller, their blades getting longer, and their power outputs have been increasing. with relation to Rotor Diameter, I can see this very well. it is worth noting here that net rated power and gross output are the same and that is why I have a 1-1 correlation.
+        with hub height and power, I see a very strong correlation, this makes sense as the larger the blades are the more wind they can catch and the more power they can generate.
+        with hub height and rotor diameter, I also see a strong correlation which also makes sense as the longer the blades get the higher you need to build the turbine. I don't want blades hitting the ground and I also want to keep the blades in the wind.
+        I can also see a correlation between water depth and distance from the coastline which makes sense, as the further you go from land the deeper the water gets.
+    </p>
+    <p>
+        <strong>Weak Correlations</strong><br>
+        when it comes to the offshore sector. I see weak correlations because this does not determine the type of turbine that is built. As the technology improves the biggest and the best will be built. given that some turbines can be built to float the water depth and distance from the coastline really should have much impact. water depth and distance from the coastline also have weak correlations and would have very little to do with the type of turbine built as the water line is the water line and the metrics I have are ultimately determined by that. I can say that the the deeper the water and the further away from the coastline does not correlate to larger more powerful turbines.
+    </p>
+    <p>
+        <strong>Conclusion</strong><br>
+        the improvement of technology is represented by the growth in power output and the strong correlating increase in Rotor diameter and hub height. As the turbines become more powerful the blades get longer and the towers get taller. the turbines being built offshore does not impact the improved power and size of the turbines and I can see this in the weak correlation. with water depth and distance from shore.<br><br>
+        I learned that there is a very weak correlation between the physical dimensions and power rating vs the water depth and distance from the coastline. This makes sense as the type design of turbines isn’t affected by whether it is onshore or offshore.
+    </p>
+    <img style="float: right; margin-left: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="img/posts/Wind Turbine Pics/1 correlation_heatmap.png" alt="Missing Values in Python">
+</section>
 
-I learned that there is a very weak correlation between the physical dimensions and power rating vs the water depth and distance from the coastline. This makes sense as the type design of turbines isn’t affected by whether it is onshore or offshore. </p>
-
-<img style="float: right; margin-left: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src= "img/posts/Wind Turbine Pics/1 correlation_heatmap.png"alt="Missing Values in Python">
-    
-<section>
             <h2>Step 3: Linear Regression</h2>
 </P>“As turbines Improve over time their dimensions and output increase.”
 This was the hypothesis i wanted to test, i using a simple regression method. I used test and training subsets of data to determine the relationships between the various dimensions of turbines.
