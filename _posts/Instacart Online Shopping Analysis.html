@@ -88,8 +88,6 @@ This data is regularly updated and free to use for research purposes.</p>
 
 <section>
 
-<section>
-
  <h2>Step 4: Deriving New Variables</h2>
   </p style="overflow: hidden; text-align: justify;">In order to answer the questions posed and gain deeper insight into the data, I derived new columns with labels for various parameters that I set. Below is and example for price range.</p>
   </p style="overflow: hidden; text-align: justify;">I created price ranges for the products with Low, Mid, and High price ranges.</p>
@@ -101,4 +99,11 @@ This data is regularly updated and free to use for research purposes.</p>
 
 <section>  
 
+ <h2>Step 5: Grouping Data</h2>
 
+  </p style="overflow: hidden; text-align: justify;">I used the groupby() and transform(0 functions to create a column with maximum number of orders per unique customer id. I used the np.max argument to determine the maximum order number for each user.</p>
+  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="img/posts/Instacart/Visuals/Code/14 Grouping.png"> 
+
+</p style="overflow: hidden; text-align: justify;">I used the same process to derive several more categories such as order hour of the day for repeat customers and new customers, High-income/ Mid-Income/ Low-income customers, customers with and without dependants and customers by region to name a few.</p> 
+
+<section>  
