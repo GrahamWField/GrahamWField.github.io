@@ -43,8 +43,8 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
 </p>
 <section>
 
- <h2>Step 1: Initial Data Exploration and Cleaning</h2>
-  </p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with. </p>
+<h2>Step 1: Initial Data Exploration and Cleaning</h2>
+</p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with. </p>
 
 </p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
 
@@ -55,7 +55,7 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
  <h2>Step 2: Data Wrangling</h2>
   </p style="overflow: hidden; text-align: justify;">In this step, I identified which were unnecessary and dropped them from the data frame. Several columns were also renamed for ease of use and legibility. Some of the data types needed to be changed from integer to string.</p>
 
-  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="img/posts/Instacart/Visuals/Code/3 Wrangling.png.png"> 
+  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/3 Wrangling.png"> 
 <span class="caption text-muted">Renaming of a column</span>
 
 
@@ -66,3 +66,30 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
 </p style="overflow: hidden; text-align: justify;">For privacy reasons, all personal information which could lead to the identification of individuals was removed such as first and last names as well as addresses.
 This data is regularly updated and free to use for research purposes.</p> 
 <section>
+
+<h2>Step 1: Initial Data Exploration and Cleaning</h2>
+</p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with. </p>
+
+</p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
+
+<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/1 Cleaning.png"> 
+  
+<section>
+
+ <h2>Step 3: Merging Data Sets</h2>
+  </p style="overflow: hidden; text-align: justify;">Before merging the two data frames i needed to check the shape of the data frames, looking at the number of rows and columns in each. I did this in order to select the correct type of Join.</p>
+  </p style="overflow: hidden; text-align: justify;">I used the “product_id” column as both data frames had this column. I used a left join in Python to merge two dataframes so that all records from the left dataframe are included in the result, and only the matching records from the right dataframe are included, ensuring no data from the left dataframe is lost even if there are no corresponding matches in the right dataframe.</p>
+ 
+  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/5 Merging.png"> 
+<span class="caption text-muted">Renaming of a column</span>
+
+
+<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/4 Wrangling.png"> 
+<span class="caption text-muted">Here I dropped one of the unnecessary columns.</span>
+
+ 
+</p style="overflow: hidden; text-align: justify;">For privacy reasons, all personal information which could lead to the identification of individuals was removed such as first and last names as well as addresses.
+This data is regularly updated and free to use for research purposes.</p> 
+<section>
+
+
