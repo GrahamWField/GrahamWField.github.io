@@ -1,109 +1,85 @@
 ---
 layout: post
 title: "Instacart Online Shopping Analysis"
-subtitle: "Tools: Python, Jupyter Notebooks "
+subtitle: "Tools: Python, Jupyter Notebooks"
 date: 2024-02-04 10:45:13 -0400
 background: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
 image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
 ---
 
 <head>
-  <h2>Introduction</h2>
-<p>Instacart is a real online grocer that has made some of its data available for download and use. The customer dataset used as part of the analysis was synthesised and contains data on number of dependencies, income and more.
 </head>
 
-<p><b>Tools:</b>
-    <ul>
-        <li>Python</li>
-        <li>Python</li>
-        <li>Jupyter Notebooks</li>
-        <li>Libraries : Pandas, Numpy, Seaborn, Matplotlib </li>
-    </ul>
-</p>
+<body>
+  <h2>Introduction</h2>
+  <p>Instacart is a real online grocer that has made some of its data available for download and use. The customer dataset used as part of the analysis was synthesized and contains data on the number of dependencies, income, and more.</p>
 
-<p><b>Data:</b>
-    <ul>
-        <li> Open Source Data</li>
-        <li> 3 Million Rows</li>
-        <li> 23 Numeric and Categorical variables</li>
-        <li> Joins: Order, Product, Customers and Department</li>
-    </ul>
-</p>
+  <p><b>Tools:</b></p>
+  <ul>
+      <li>Python</li>
+      <li>Jupyter Notebooks</li>
+      <li>Libraries: Pandas, Numpy, Seaborn, Matplotlib</li>
+  </ul>
 
-<p></h2>Key Research Questions</b>
-    <ul>
-        <li>What are the busiest days of the week?</li>
-        <li>When are the busiest hours of the day?</li>
-        <li>Are there particular times of the day when spending is the highest?</li>
-        <li>Who is placing the most orders?</li>
-        <li>Which product departments are more popular than others?</li>
-        <li>What is the distribution among users with regards to their brand loyalty and frequency of re-order and expenditure using mean, max and min?</li>
-        <li>Is there a connection between age and family status in terms of ordering habits?</li>
-    </ul>
-</p>
-<section>
+  <p><b>Data:</b></p>
+  <ul>
+      <li>Open Source Data</li>
+      <li>3 Million Rows</li>
+      <li>23 Numeric and Categorical variables</li>
+      <li>Joins: Order, Product, Customers, and Department</li>
+  </ul>
 
-<h2>Step 1: Initial Data Exploration and Cleaning</h2>
-</p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with. </p>
+  <p><b>Key Research Questions</b></p>
+  <ul>
+      <li>What are the busiest days of the week?</li>
+      <li>When are the busiest hours of the day?</li>
+      <li>Are there particular times of the day when spending is the highest?</li>
+      <li>Who is placing the most orders?</li>
+      <li>Which product departments are more popular than others?</li>
+      <li>What is the distribution among users with regards to their brand loyalty and frequency of re-order and expenditure using mean, max, and min?</li>
+      <li>Is there a connection between age and family status in terms of ordering habits?</li>
+  </ul>
 
-</p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
+  <section>
+    <h2>Step 1: Initial Data Exploration and Cleaning</h2>
+    <p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with.</p>
+    <p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/1 Cleaning.png" alt="Data Cleaning">
+  </section>
 
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/1 Cleaning.png"> 
-  
-<section>
+  <section>
+    <h2>Step 2: Data Wrangling</h2>
+    <p style="overflow: hidden; text-align: justify;">In this step, I identified unnecessary columns and dropped them from the data frame. Several columns were also renamed for ease of use and legibility. Some of the data types needed to be changed from integer to string.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/3 Wrangling.png" alt="Column Renaming">
+    <span class="caption text-muted">Renaming of a column</span>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/4 Wrangling.png" alt="Dropping Columns">
+    <span class="caption text-muted">Dropping unnecessary columns</span>
+    <p style="overflow: hidden; text-align: justify;">For privacy reasons, all personal information which could lead to the identification of individuals was removed, such as first and last names as well as addresses. This data is regularly updated and free to use for research purposes.</p>
+  </section>
 
- <h2>Step 2: Data Wrangling</h2>
-  </p style="overflow: hidden; text-align: justify;">In this step, I identified which were unnecessary and dropped them from the data frame. Several columns were also renamed for ease of use and legibility. Some of the data types needed to be changed from integer to string.</p>
+  <section>
+    <h2>Step 3: Merging Data Sets</h2>
+    <p style="overflow: hidden; text-align: justify;">Before merging the two data frames, I checked the shape of the data frames, looking at the number of rows and columns in each. This helped in selecting the correct type of join.</p>
+    <p style="overflow: hidden; text-align: justify;">I used the “product_id” column as both data frames had this column. I used a left join in Python to merge two data frames so that all records from the left dataframe are included in the result, and only the matching records from the right dataframe are included, ensuring no data from the left dataframe is lost even if there are no corresponding matches in the right dataframe.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/5 Merging.png" alt="Merging Data Frames">
+    <span class="caption text-muted">Merging the two data frames</span>
+    <p style="overflow: hidden; text-align: justify;">To confirm the success of the merge, I used a true-false indicator. The absence of false flags indicated a successful join.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/6 Merging.png" alt="Merge Validation">
+  </section>
 
-  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/3 Wrangling.png"> 
-<span class="caption text-muted">Renaming of a column</span>
+  <section>
+    <h2>Step 4: Deriving New Variables</h2>
+    <p style="overflow: hidden; text-align: justify;">To answer the research questions and gain deeper insight into the data, I derived new columns with labels for various parameters. Below is an example of creating price ranges.</p>
+    <p style="overflow: hidden; text-align: justify;">I created price ranges for the products, categorized as Low, Mid, and High price ranges.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/7 New Variables.png" alt="Price Range Derivation">
+    <p style="overflow: hidden; text-align: justify;">Using the `loc` function, I created a frequency count for the number of orders within the price ranges, ultimately creating a new column called “Price_range_Loc.”</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/16 loc.png" alt="Creating New Columns">
+  </section>
 
-
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/4 Wrangling.png"> 
-<span class="caption text-muted">Here I dropped one of the unnecessary columns.</span>
-
- 
-</p style="overflow: hidden; text-align: justify;">For privacy reasons, all personal information which could lead to the identification of individuals was removed such as first and last names as well as addresses.
-This data is regularly updated and free to use for research purposes.</p> 
-<section>
-
-<h2>Step 1: Initial Data Exploration and Cleaning</h2>
-</p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with. </p>
-
-</p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
-
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/1 Cleaning.png"> 
-  
-<section>
-
- <h2>Step 3: Merging Data Sets</h2>
-  </p style="overflow: hidden; text-align: justify;">Before merging the two data frames i needed to check the shape of the data frames, looking at the number of rows and columns in each. I did this in order to select the correct type of Join.</p>
-  </p style="overflow: hidden; text-align: justify;">I used the “product_id” column as both data frames had this column. I used a left join in Python to merge two dataframes so that all records from the left dataframe are included in the result, and only the matching records from the right dataframe are included, ensuring no data from the left dataframe is lost even if there are no corresponding matches in the right dataframe.</p>
- 
-  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/5 Merging.png"> 
-<span class="caption text-muted">Here I am merging the two data frames.</span>
-
-</p style="overflow: hidden; text-align: justify;">Next, I want to confirm the success of the merge, I used a true-false indicator. I can see below that there are no false flags so the join was successful. </p> 
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/6 Merging.png"> 
-
-<section>
-
- <h2>Step 4: Deriving New Variables</h2>
-  </p style="overflow: hidden; text-align: justify;">In order to answer the questions posed and gain deeper insight into the data, I derived new columns with labels for various parameters that I set. Below is and example for price range.</p>
-  </p style="overflow: hidden; text-align: justify;">I created price ranges for the products with Low, Mid, and High price ranges.</p>
- 
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/7 New Variables.png"> 
-
-</p style="overflow: hidden; text-align: justify;">Using the Loc function I created a frequency count  for number of orders within the price ranges. Ultimately creating a new Column called “Price_range_Loc”</p> 
-<img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/16 loc.png"> 
-
-<section>  
-
- <h2>Step 5: Grouping Data</h2>
-
-  </p style="overflow: hidden; text-align: justify;">I used the groupby() and transform(0 functions to create a column with maximum number of orders per unique customer id. I used the np.max argument to determine the maximum order number for each user.</p>
-  <img style="15px; height: auto; border: 5px solid #555" class="img-fluid" src="img/posts/Instacart/Visuals/Code/14 Grouping.png"> 
-
-</p style="overflow: hidden; text-align: justify;">I used the same process to derive several more categories such as order hour of the day for repeat customers and new customers, High-income/ Mid-Income/ Low-income customers, customers with and without dependants and customers by region to name a few.</p> 
-
-<section>  
+  <section>
+    <h2>Step 5: Grouping Data</h2>
+    <p style="overflow: hidden; text-align: justify;">I used the `groupby()` and `transform()` functions to create a column with the maximum number of orders per unique customer id. The `np.max` argument was used to determine the maximum order number for each user.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="img/posts/Instacart/Visuals/Code/14 Grouping.png" alt="Grouping Data">
+    <p style="overflow: hidden; text-align: justify;">The same process was used to derive several more categories, such as order hour of the day for repeat and new customers, income levels (High, Mid, Low), customers with and without dependents, and customers by region, among others.</p>
+  </section>
+</body>
