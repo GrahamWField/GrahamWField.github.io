@@ -39,14 +39,14 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
       <li>What is the distribution among users with regards to their brand loyalty and frequency of re-order and expenditure using mean, max, and min?</li>
       <li>Is there a connection between age and family status in terms of ordering habits?</li>
   </ul>
-
+<p>
   <section>
     <h2>Step 1: Initial Data Exploration and Cleaning</h2>
     <p style="overflow: hidden; text-align: justify;">In the first step of the analysis, I conducted an initial analysis to gain an understanding of the shape and size of the data frames I was going to be dealing with.</p>
     <p style="overflow: hidden; text-align: justify;">Next, I needed to check for missing and duplicated data. Some rows needed to be deleted while others had missing values due to only a single order being placed in the history of the user.</p>
     <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/1 Cleaning.png" alt="Data Cleaning">
   </section>
-
+<p>
   <section>
     <h2>Step 2: Data Wrangling</h2>
     <p style="overflow: hidden; text-align: justify;">In this step, I identified unnecessary columns and dropped them from the data frame. Several columns were also renamed for ease of use and legibility. Some of the data types needed to be changed from integer to string.</p>
@@ -56,7 +56,7 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
     <span class="caption text-muted">Dropping unnecessary columns</span>
     <p style="overflow: hidden; text-align: justify;">For privacy reasons, all personal information which could lead to the identification of individuals was removed, such as first and last names as well as addresses. This data is regularly updated and free to use for research purposes.</p>
   </section>
-
+<p>
   <section>
     <h2>Step 3: Merging Data Sets</h2>
     <p style="overflow: hidden; text-align: justify;">Before merging the two data frames, I checked the shape of the data frames, looking at the number of rows and columns in each. This helped in selecting the correct type of join.</p>
@@ -66,7 +66,7 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
     <p style="overflow: hidden; text-align: justify;">To confirm the success of the merge, I used a true-false indicator. The absence of false flags indicated a successful join.</p>
     <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/6 Merging.png" alt="Merge Validation">
   </section>
-
+<p>
   <section>
     <h2>Step 4: Deriving New Variables</h2>
     <p style="overflow: hidden; text-align: justify;">To answer the research questions and gain deeper insight into the data, I derived new columns with labels for various parameters. Below is an example of creating price ranges.</p>
@@ -75,7 +75,7 @@ image_url: '/img/posts/Instacart/Visuals/Instacart-Logo-scaled.jpg'
     <p style="overflow: hidden; text-align: justify;">Using the `loc` function, I created a frequency count for the number of orders within the price ranges, ultimately creating a new column called “Price_range_Loc.”</p>
     <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Instacart/Visuals/Code/16 loc.png" alt="Creating New Columns">
   </section>
-
+<p>
   <section>
     <h2>Step 5: Grouping Data</h2>
     <p style="overflow: hidden; text-align: justify;">I used the `groupby()` and `transform()` functions to create a column with the maximum number of orders per unique customer id. The `np.max` argument was used to determine the maximum order number for each user.</p>
