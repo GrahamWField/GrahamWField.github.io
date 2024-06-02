@@ -3,8 +3,8 @@ layout: post
 title: "Rockbuster Video Rentals Analysis"
 subtitle: "Tools: PostgreSQL, Tableau"
 date: 2024-02-01 10:00:00 -0400
-background: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
-image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
+background: '/img/posts/Rock Buster/rock  banner.png'
+image_url: '/img/posts/Rock Buster/rock  banner.png'
 ---
 
 <head>
@@ -42,12 +42,15 @@ image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
 
   <h3>Getting to Know the Data</h3>
   <p>I began by creating a diagram of the tables which resembled a snowflake pattern, in addition to this I created a data dictionary which I needed for the joins later on. I started to search for duplicate and missing records to make sure my data was complete and consistent.</p>
+  <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Proccess/1db vis.png" alt="Data Cleaning"><p>
   <p>Next was describing the data so that I could have some idea what I was working with. For example this SQL query is calculating the mode (most frequently occurring value) for several columns in the film table from a PostgreSQL database. The query uses the MODE() function within the GROUP BY clause to achieve this.</p>
+  <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Proccess/2.png" alt="Data Cleaning"><p>
   <p>We can use this to find things like most popular film genre, longest movie, average movie rental, which genres contribute the most revenue, where are the most loyal customers and which are restrictions are the most popular.</p>
 
   <h3>Results</h3>
   <h4>High Customer and Payment Countries:</h4>
   <ul>
+   <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/1.png" alt="Data Cleaning"><p>  
     <li>India, China, and the United States: These countries have the largest red circles, indicating they have generated the highest total payments. They are also shaded in darker blue, suggesting a higher number of customers.</li>
     <li>Other notable countries: Brazil, Japan, and Russia also have significant red circles, indicating substantial payments and a good number of customers.</li>
   </ul>
@@ -71,6 +74,7 @@ image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
 
   <h4>Rental Rate by NCPP Rating:</h4>
   <ul>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/2.png" alt="Data Cleaning"><p>  
     <li>G Rating: Average Rental Rate: 2.9237</li>
     <li>Movies rated G (General Audiences) have an average rental rate of approximately 2.92.</li>
     <li>NC-17 Rating: Average Rental Rate: 2.9710</li>
@@ -89,8 +93,9 @@ image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
     <li>G, NC-17, and R Rated Movies: These categories have slightly lower average rental rates, with NC-17 having the highest rate among them at 2.9710, followed by R at 2.9387 and G at 2.9237.</li>
     <li>The rental rate differences among the ratings are relatively small but can indicate preferences or pricing strategies based on movie ratings.</li>
   </ul>
-
-  <ul>
+ <h4>Top 10 Customers:</h4>
+    <ul>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/3.png" alt="Data Cleaning"><p>  
     <li>Top Spenders: Eleanor Hu. from Saint-Denis, Reunion, and Clara Shaw from Molodetno, Belarus, are the highest spenders with $211.6 and $189.6, respectively.</li>
     <li>High Spenders: All customers listed are significant contributors to revenue, with the lowest among them (Roland So. from Yingkou, China) spending $80.8.</li>
     <li>Moderate to High Spending: Other customers, such as Casey Mena, Sara Perry, Leslie Sew., and Cecil Vines, show spending amounts between $115.7 and $130.7, indicating a consistent high level of expenditure among the top 10.</li>
@@ -129,6 +134,7 @@ image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
 
   <h4>Rental Rate by NCPP Rating Recommendations:</h4>
   <ul>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/4.png" alt="Data Cleaning"><p> 
     <li>Optimize Pricing for High Demand Ratings:
       <ul>
         <li>PG and PG-13 rated movies have the highest average rental rates, indicating strong demand. Consider maintaining or slightly increasing rental prices for these categories to maximize revenue without deterring customers.</li>
