@@ -1,0 +1,140 @@
+---
+layout: post
+title: "Preparing for Influenza Season"
+subtitle: "Tools: Excel, Tableau Public"
+date: 2024-02-10 10:45:13 -0400
+background: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
+image_url: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
+---
+
+<head>
+</head>
+
+<body>
+  <h2>Introduction</h2>
+  <p>The annual influenza season in the United States poses significant challenges for healthcare providers. Vulnerable populations, such as young children and the elderly, are particularly at risk of developing severe complications from the flu, which often leads to increased hospitalizations. Medical staffing agencies play a crucial role in supporting hospitals and clinics by providing temporary staff to manage the surge in patients.</p>
+
+  <h2>Objective</h2>
+  <p>The primary objective of this analysis is to determine the optimal timing and allocation of staff to hospitals across the United States during the influenza season.</p>
+
+  <h2>Scope</h2>
+  <p>The project encompasses all hospitals within the 50 states of the United States, focusing on the upcoming influenza season to ensure adequate staffing and resource distribution. By examining historical data and identifying trends, we aim to enhance preparedness and response strategies for healthcare facilities.</p>
+
+  <h2>Key Research Questions</h2>
+  <ul>
+      <li>Provide information to support a staffing plan, detailing what data can help inform the timing and spatial distribution of medical personnel throughout the United States.</li>
+      <li>Determine whether influenza occurs seasonally or throughout the entire year. If seasonal, does it start and end at the same time (month) in every state?</li>
+      <li>Prioritize states with large vulnerable populations. Consider categorizing each state as low-, medium-, or high-need based on its vulnerable population count.</li>
+      <li>Assess data limitations that may prevent you from conducting your desired analyses.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Initial Data Exploration and Cleaning</h2>
+    <p>After drawing requirements from the stakeholders and the business requirements document I evaluated each data set. There were several considerations with the data namely: its reliability, ownership, and ethical concerns. I don't want to present any data that could lead to the identification of individuals, given the scope and scale of this medical data.</p>
+    <p>The focus of this was to send staff and allocate resources to areas which experience the greatest need. I focused on areas with the highest mortality rates.</p>
+    <p>From the 4 possible data sets I selected:</p>
+    <ul>
+      <li>US Geographical Census Data</li>
+      <li>US Influenza Deaths</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Step 2: Cleaning and Consistency Checks</h2>
+    <p>During the exploration of the data I found several inconsistencies namely: the naming of states and areas which were recorded but not part of the US such as Puerto Rico.</p>
+    <p>There was some missing data due to privacy requirements where data that was less than 10 was removed. I imputed using both random and averaged methods. But ultimately chose the random seed.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Cleaning.png" alt="Data Cleaning">
+  </section>
+
+  <section>
+    <h2>Step 3: Integration</h2>
+    <p>In order to use the data sets for analysis I had to integrate or merge them. This is due to the data sets often not being complete and ready for use.</p>
+    <p>I began by mapping the data and trying to find commonalities between the data sets. I identified “State” and “Year” as common columns. There was an issue with granularity as The US census data had state and county with year while the Influenza Deaths had State with Year and Month.</p>
+    <p>Now that I have a common key to work with, I created Pivot tables which summarized the data on both data sets and allowed me to integrate the two data sets. I used VLOOKUP to integrate the data sets into one.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Integration.png" alt="Data Integration">
+  </section>
+
+  <section>
+    <h2>Step 4: Statistical Analysis and Testing</h2>
+    <p>I began by stating 2 hypotheses:</p>
+    <ul>
+      <li>Null Hypothesis (H0): The mean influenza mortality rate for individuals aged 65 and older is equal to the mean influenza mortality rate for individuals under 65.</li>
+      <li>Alternative Hypothesis (HA): The mean influenza mortality rate for individuals aged 65 and older is not equal to the mean influenza mortality rate for individuals under 65.</li>
+    </ul>
+    <p>The goal was to test whether the two groups had the same risk of death from influenza. The first test I ran was a statistical test to determine: Distribution, Standard Deviation, Number of outliers, and correlation. I wanted to determine if the average mortality rate was higher or lower for the two age groups.</p>
+    <p>The next test I ran was the two-tail test because I was interested in confirming the results from the previous test and confirming or rejecting the null hypothesis with certainty. I decided to include both equal and unequal variance tests for the following reasons.</p>
+    <p>The first test shows the difference between the deaths in the 65+ age group and the overall census data for the 65+ population, highlighting the impact of influenza within this age group relative to its population size.</p>
+    <p>The second test directly compares the mortality rates between the two age groups, showing the disparity in influenza mortality between younger and older individuals.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Statistical_Analysis.png" alt="Statistical Analysis">
+  </section>
+
+  <section>
+    <h2>Step 5: Visual Analysis</h2>
+    <h3>Defining Influenza and Who Is at Risk?</h3>
+    <p>What is Influenza? Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. It can cause mild to severe illness and at times can lead to death. The flu spreads through respiratory droplets when people with the flu cough, sneeze, or talk.</p>
+    <p>Who is at Risk? Influenza significantly impacts certain age groups more than others. The most vulnerable age groups include:</p>
+    <ul>
+      <li>Children younger than 5 years old, with a mortality rate of 3.2%.</li>
+      <li>People over the age of 65 years, with an average mortality rate of 4.6%.</li>
+      <ul>
+        <li>65-74 years: 1.4% mortality rate</li>
+        <li>75-84 years: 3.7% mortality rate</li>
+        <li>85+ years: 8.7% mortality rate</li>
+      </ul>
+    </ul>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Defining_Influenza.png" alt="Defining Influenza">
+    <p>Vulnerable Groups: The chart shows the death rates across various age groups, highlighting the higher risk among the very young and the elderly. These populations should be the focus of targeted interventions to reduce mortality rates during the influenza season.</p>
+  </section>
+
+  <section>
+    <h3>Where and Who is at Risk?</h3>
+    <p>Geographical Analysis: The geographical distribution of influenza deaths shows significant variations. The top 15 states with the highest number of deaths include California, New York, Texas, Pennsylvania, and Florida, which are also among the most densely populated states.</p>
+    <p>Regional Deaths Geographically: Mapping the deaths geographically allows us to identify high-risk areas. This information is crucial for directing resources and planning healthcare strategies.</p>
+    <p>Total Deaths by Age Group: Analyzing the total deaths by age group reveals that older adults, especially those above 65, are at the highest risk. This demographic data is essential for preparing healthcare systems to meet the needs of these vulnerable populations.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Geographical_Analysis.png" alt="Geographical Analysis">
+  </section>
+
+  <section>
+    <h3>When is Influenza Season?</h3>
+    <p>Influenza Seasonality: Influenza season typically starts in December, peaks in January, and declines by March. These months coincide with colder weather, which contributes to the spread of the virus.</p>
+    <p>State-specific Analysis: California, New York, and Texas have the highest number of deaths, correlating with their large populations. This trend underscores the need for targeted resource allocation during peak months.</p>
+    <p>Monthly Distribution of Deaths: Understanding the monthly distribution of deaths can help in planning the deployment of medical staff and resources. Ensuring that healthcare facilities are adequately staffed during peak months can save lives and improve patient outcomes.</p>
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Seasonality.png" alt="Influenza Seasonality">
+  </section>
+
+  <section>
+    <h2>Conclusion and Recommendations</h2>
+    <p>Conclusion: The analysis shows that certain age groups and geographical regions require more resources during the influenza season. Specifically, children under 5 and adults over 65 years need prioritized care due to higher mortality rates.</p>
+    <p>Recommendations:</p>
+    <ul>
+      <li>Prioritize Care for Vulnerable Age Groups: Ensure that resources are directed towards children under 5 and adults over 65.</li>
+      <li>Prepare for Seasonal Peaks: Staffing and resources should be heightened from December to March.</li>
+      <li>Allocate Resources to High-Risk States: States like California, New York, Texas, Pennsylvania, and Florida should receive the majority of resources. The next tier of states should receive moderate resources.</li>
+      <li>Enhance Public Health Campaigns: Increase awareness and vaccination efforts, particularly among high-risk groups and in high-risk states.</li>
+    </ul>
+    <p>Further Analysis: Future research should include additional data on vaccination rates, living standards, nutrition, and substance use to better understand the spread and survival rates of influenza. Collaboration with public health agencies can provide a more comprehensive approach to managing influenza seasons.</p>
+  </section>
+
+  <section>
+    <h2>Ongoing Monitoring and Data Limitations</h2>
+    <p>Ongoing Monitoring:</p>
+    <ul>
+      <li>Continue to track death rates over time to identify trends and emerging patterns.</li>
+      <li>Include comparisons between vaccinated and unvaccinated populations to assess the effectiveness of vaccination campaigns.</li>
+      <li>Assess how influenza deaths compare to other leading causes of death to allocate healthcare resources effectively.</li>
+    </ul>
+    <p>Data Limitations:</p>
+    <ul>
+      <li>Limited information on general health, fitness, diet, and hereditary factors can affect the analysis. More detailed health data could improve predictive models.</li>
+      <li>High-population density states with low death rates should be studied to identify effective health practices that could be implemented elsewhere.</li>
+      <li>Data quality and completeness are crucial; ensuring accurate reporting from healthcare facilities will enhance the reliability of future analyses.</li>
+    </ul>
+    <p>Assessment Recommendations:</p>
+    <ul>
+      <li>Regularly update and review data to reflect current trends.</li>
+      <li>Engage with local health departments to validate and supplement data.</li>
+      <li>Implement technological solutions to improve data collection and analysis.</li>
+    </ul>
+    <p>By addressing these limitations and continuing to monitor relevant data, we can improve our understanding of influenza patterns and enhance our preparedness for future seasons.</p>
+  </section>
+</body>
