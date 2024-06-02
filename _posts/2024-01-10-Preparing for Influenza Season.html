@@ -3,8 +3,8 @@ layout: post
 title: "Preparing for Influenza Season"
 subtitle: "Tools: Excel, Tableau Public"
 date: 2024-01-10 10:45:13 -0400
-background: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
-image_url: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
+background: '/img/posts/Influenza/Visualisations/Banner.png'
+image_url: '/img/posts/Influenza/Visualisations/Banner.png'
 ---
 
 <head>
@@ -43,15 +43,16 @@ image_url: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
     <h2>Step 2: Cleaning and Consistency Checks</h2>
     <p>During the exploration of the data I found several inconsistencies namely: the naming of states and areas which were recorded but not part of the US such as Puerto Rico.</p>
     <p>There was some missing data due to privacy requirements where data that was less than 10 was removed. I imputed using both random and averaged methods. But ultimately chose the random seed.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Cleaning.png" alt="Data Cleaning">
-  </section>
 
   <section>
     <h2>Step 3: Integration</h2>
     <p>In order to use the data sets for analysis I had to integrate or merge them. This is due to the data sets often not being complete and ready for use.</p>
     <p>I began by mapping the data and trying to find commonalities between the data sets. I identified “State” and “Year” as common columns. There was an issue with granularity as The US census data had state and county with year while the Influenza Deaths had State with Year and Month.</p>
     <p>Now that I have a common key to work with, I created Pivot tables which summarized the data on both data sets and allowed me to integrate the two data sets. I used VLOOKUP to integrate the data sets into one.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Integration.png" alt="Data Integration">
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/1.png" alt="Data Integration">
+    <p class="caption text-muted" style="text-align: center;">US Census Data</p>
+     <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/2.png" alt="Data Integration">
+  <p class="caption text-muted" style="text-align: center;">Influenza Deaths</p>
   </section>
 
   <section>
@@ -65,7 +66,8 @@ image_url: '/img/posts/Influenza/Visuals/Influenza-Season.jpg'
     <p>The next test I ran was the two-tail test because I was interested in confirming the results from the previous test and confirming or rejecting the null hypothesis with certainty. I decided to include both equal and unequal variance tests for the following reasons.</p>
     <p>The first test shows the difference between the deaths in the 65+ age group and the overall census data for the 65+ population, highlighting the impact of influenza within this age group relative to its population size.</p>
     <p>The second test directly compares the mortality rates between the two age groups, showing the disparity in influenza mortality between younger and older individuals.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visuals/Statistical_Analysis.png" alt="Statistical Analysis">
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/3.png" alt="Statistical Analysis">
+    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/4.png" alt="Statistical Analysis">
   </section>
 
   <section>
