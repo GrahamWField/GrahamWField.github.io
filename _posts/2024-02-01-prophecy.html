@@ -1,0 +1,186 @@
+---
+layout: post
+title: "Rockbuster Video Rentals Analysis"
+subtitle: "Tools: PostgreSQL, Tableau"
+date: 2024-02-01 10:00:00 -0400
+background: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
+image_url: '/img/posts/Rockbuster/Visuals/Rockbuster-Logo.jpg'
+---
+
+<head>
+</head>
+
+<body>
+  <h2>Rockbuster Video Rentals</h2>
+  <p>Posted by Graham Field on March 10, 2024 – 10 mins read</p>
+  
+  <h3>Project Overview</h3>
+  <p><b>Duration of the project:</b> 1 week</p>
+  <p><b>Role:</b> Data Analyst</p>
+  <p><b>Tools:</b></p>
+  <ul>
+    <li>PostgreSQL</li>
+    <li>Tableau</li>
+  </ul>
+  <p><b>Data:</b></p>
+  <ul>
+    <li>Relational Database</li>
+    <li>2 Fact tables and 13 Dimension Tables</li>
+  </ul>
+
+  <h3>Key Questions</h3>
+  <ul>
+    <li>Which movies contributed the most/least to revenue gain?</li>
+    <li>What was the average rental duration for all videos?</li>
+    <li>Which countries are Rockbuster customers based in?</li>
+    <li>Where are customers with a high lifetime value based?</li>
+    <li>Do sales figures vary between geographic regions?</li>
+  </ul>
+
+  <h3>Introduction</h3>
+  <p>Rockbuster Stealth LLC is a movie rental company that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime, the Rockbuster Stealth management team is planning to use its existing movie licenses to launch an online video rental service in order to stay competitive.</p>
+
+  <h3>Getting to Know the Data</h3>
+  <p>I began by creating a diagram of the tables which resembled a snowflake pattern, in addition to this I created a data dictionary which I needed for the joins later on. I started to search for duplicate and missing records to make sure my data was complete and consistent.</p>
+  <p>Next was describing the data so that I could have some idea what I was working with. For example this SQL query is calculating the mode (most frequently occurring value) for several columns in the film table from a PostgreSQL database. The query uses the MODE() function within the GROUP BY clause to achieve this.</p>
+  <p>We can use this to find things like most popular film genre, longest movie, average movie rental, which genres contribute the most revenue, where are the most loyal customers and which are restrictions are the most popular.</p>
+
+  <h3>Results</h3>
+  <h4>High Customer and Payment Countries:</h4>
+  <ul>
+    <li>India, China, and the United States: These countries have the largest red circles, indicating they have generated the highest total payments. They are also shaded in darker blue, suggesting a higher number of customers.</li>
+    <li>Other notable countries: Brazil, Japan, and Russia also have significant red circles, indicating substantial payments and a good number of customers.</li>
+  </ul>
+
+  <h4>Moderate Customer and Payment Countries:</h4>
+  <ul>
+    <li>Countries like Canada, Australia, Germany, and the United Kingdom have moderate red circles and are shaded in medium blue, indicating a moderate number of customers and payments.</li>
+  </ul>
+
+  <h4>Low Customer and Payment Countries:</h4>
+  <ul>
+    <li>Many countries in Africa, parts of South America, and some parts of Asia and Europe are shaded in lighter blue, indicating fewer customers. The red circles, if present, are small, indicating lower total payments.</li>
+  </ul>
+
+  <h4>Insights:</h4>
+  <ul>
+    <li>The video rental company seems to have a strong presence in major economies such as the US, India, and China, both in terms of customer base and revenue.</li>
+    <li>There is significant variation in customer and payment distribution globally, with some regions contributing more than others.</li>
+    <li>This data can be useful for the company to identify key markets and potential areas for growth. Focusing on regions with lower customer numbers but high potential for growth could be beneficial.</li>
+  </ul>
+
+  <h4>Rental Rate by NCPP Rating:</h4>
+  <ul>
+    <li>G Rating: Average Rental Rate: 2.9237</li>
+    <li>Movies rated G (General Audiences) have an average rental rate of approximately 2.92.</li>
+    <li>NC-17 Rating: Average Rental Rate: 2.9710</li>
+    <li>Movies rated NC-17 (Adults Only) have an average rental rate of approximately 2.97.</li>
+    <li>PG Rating: Average Rental Rate: 3.0519</li>
+    <li>Movies rated PG (Parental Guidance Suggested) have the highest average rental rate of approximately 3.05.</li>
+    <li>PG-13 Rating: Average Rental Rate: 3.0348</li>
+    <li>Movies rated PG-13 (Parents Strongly Cautioned) have an average rental rate of approximately 3.03.</li>
+    <li>R Rating: Average Rental Rate: 2.9387</li>
+    <li>Movies rated R (Restricted) have an average rental rate of approximately 2.94.</li>
+  </ul>
+
+  <h4>Insights:</h4>
+  <ul>
+    <li>PG and PG-13 Rated Movies: These categories have the highest average rental rates, with PG-rated movies slightly leading at 3.0519, followed closely by PG-13 at 3.0348. This suggests that movies in these categories are rented at higher rates compared to other ratings.</li>
+    <li>G, NC-17, and R Rated Movies: These categories have slightly lower average rental rates, with NC-17 having the highest rate among them at 2.9710, followed by R at 2.9387 and G at 2.9237.</li>
+    <li>The rental rate differences among the ratings are relatively small but can indicate preferences or pricing strategies based on movie ratings.</li>
+  </ul>
+
+  <ul>
+    <li>Top Spenders: Eleanor Hu. from Saint-Denis, Reunion, and Clara Shaw from Molodetno, Belarus, are the highest spenders with $211.6 and $189.6, respectively.</li>
+    <li>High Spenders: All customers listed are significant contributors to revenue, with the lowest among them (Roland So. from Yingkou, China) spending $80.8.</li>
+    <li>Moderate to High Spending: Other customers, such as Casey Mena, Sara Perry, Leslie Sew., and Cecil Vines, show spending amounts between $115.7 and $130.7, indicating a consistent high level of expenditure among the top 10.</li>
+    <li>Geographic Diversity: These top spenders come from a wide range of locations, including Reunion, Belarus, Turkey, Mexico, Indonesia, United Kingdom, Ukraine, United States, Canada, and China, reflecting a broad geographic distribution of high-value customers.</li>
+  </ul>
+
+  <ul>
+    <li>Top Selling Genres: Sports, Sci-Fi, and Animation are the top three genres with the highest total sales, indicating their popularity among customers.</li>
+    <li>Moderate Selling Genres: Genres such as Comedy, Drama, Family, and Games show moderate total sales, ranging from approximately 3,750 to 4,118.</li>
+    <li>Low Selling Genres: Thriller has significantly lower total sales (48) compared to other genres, indicating it is the least popular genre among customers.</li>
+    <li>Sales Distribution: There is a noticeable gap between the highest selling genre (Sports with 4,892 sales) and the lowest selling genre (Thriller with 48 sales), showing a wide range of customer preferences.</li>
+  </ul>
+
+  <h3>Recommendations</h3>
+  <h4>Geographic Data Recommendations:</h4>
+  <ul>
+    <li>Focus on High Revenue Regions:
+      <ul>
+        <li>Increase marketing efforts in countries with high total payments such as the United States, India, and China. These markets already have a significant customer base and high revenue, indicating a strong interest in video rentals.</li>
+        <li>Implement localized promotions and advertisements to cater to regional preferences and enhance customer loyalty in these key markets.</li>
+      </ul>
+    </li>
+    <li>Expand in Moderate Revenue Regions:
+      <ul>
+        <li>For countries like Brazil, Japan, and Russia, where there is a moderate customer base and revenue, consider targeted campaigns to boost engagement and increase market share.</li>
+        <li>Analyze customer behavior in these regions to tailor offers and services that meet their specific needs and preferences.</li>
+      </ul>
+    </li>
+    <li>Explore Untapped Markets:
+      <ul>
+        <li>Identify countries with potential for growth but currently low customer numbers and revenue. Consider offering special deals or introductory offers to attract new customers.</li>
+        <li>Conduct market research to understand barriers to entry and customer preferences in these regions to effectively penetrate these markets.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>Rental Rate by NCPP Rating Recommendations:</h4>
+  <ul>
+    <li>Optimize Pricing for High Demand Ratings:
+      <ul>
+        <li>PG and PG-13 rated movies have the highest average rental rates, indicating strong demand. Consider maintaining or slightly increasing rental prices for these categories to maximize revenue without deterring customers.</li>
+        <li>Offer bundle deals or subscriptions featuring a mix of PG and PG-13 rated movies to provide value and encourage repeat rentals.</li>
+      </ul>
+    </li>
+    <li>Promote Lower Demand Ratings:
+      <ul>
+        <li>For G, NC-17, and R rated movies, which have lower average rental rates, consider promotions or discounts to boost rentals.</li>
+        <li>Highlight unique or popular titles within these categories to attract customer interest.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>Top 10 Customers Recommendations:</h4>
+  <ul>
+    <li>Enhance Customer Loyalty Programs:
+      <ul>
+        <li>Recognize and reward top spenders like Eleanor Hu. and Clara Shaw with exclusive benefits such as early access to new releases, special discounts, and personalized recommendations.</li>
+        <li>Implement a tiered loyalty program to incentivize spending and engagement across different customer segments.</li>
+      </ul>
+    </li>
+    <li>Personalized Marketing and Communication:
+      <ul>
+        <li>Use customer data to send personalized offers and communication. Tailor marketing messages based on past rental behavior and preferences to increase relevance and response rates.</li>
+        <li>Regularly engage with top customers through newsletters, surveys, and feedback forms to strengthen relationships and gather insights for service improvement.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>Sales by Genre Recommendations:</h4>
+  <ul>
+    <li>Boost Inventory for Popular Genres:
+      <ul>
+        <li>Increase the inventory of high-demand genres like Sports, Sci-Fi, and Animation to ensure availability and meet customer demand.</li>
+        <li>Regularly update and expand the catalog in these genres with new and trending titles to keep the offerings fresh and engaging.</li>
+      </ul>
+    </li>
+    <li>Promotional Campaigns for Low Demand Genres:
+      <ul>
+        <li>For genres with lower sales such as Thriller, consider running targeted promotions to spark interest. Offer discounted rentals, feature these genres in newsletters, and create themed movie nights or bundles.</li>
+        <li>Highlight critically acclaimed or popular titles within these genres to attract customers who may not typically rent from these categories.</li>
+      </ul>
+    </li>
+    <li>Genre-Based Customer Segmentation:
+      <ul>
+        <li>Segment customers based on their rental history and preferences for specific genres. Use this segmentation to create targeted marketing campaigns that showcase new releases, recommendations, and promotions in their preferred genres.</li>
+        <li>Offer personalized suggestions and curated lists to enhance the rental experience and drive sales across various genres.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Reflections</h3>
+  <p>My journey with SQL has been both enjoyable and enlightening. One of the aspects I enjoyed the most about using SQL is its powerful ability to handle and manipulate large datasets efficiently. The process of writing queries, optimizing them, and seeing immediate results has been incredibly satisfying. Each successful query felt like solving a puzzle, and the clarity it brought to complex data was immensely rewarding. While I have achieved a lot, I am excited to continue my learning journey and explore the vast possibilities that SQL offers. With continuous effort and curiosity, I aim to master SQL and leverage its full potential in my future projects.</p>
+</body>
