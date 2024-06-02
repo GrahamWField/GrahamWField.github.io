@@ -37,17 +37,17 @@ image_url: '/img/posts/Rock Buster/rock  banner.png'
     <li>Do sales figures vary between geographic regions?</li>
   </ul>
 
-  <h3>Introduction</h3>
+  <h2>Introduction</h2>
   <p>Rockbuster Stealth LLC is a movie rental company that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime, the Rockbuster Stealth management team is planning to use its existing movie licenses to launch an online video rental service in order to stay competitive.</p>
 
-  <h3>Getting to Know the Data</h3>
+  <h2>Getting to Know the Data</h2>
   <p>I began by creating a diagram of the tables which resembled a snowflake pattern, in addition to this I created a data dictionary which I needed for the joins later on. I started to search for duplicate and missing records to make sure my data was complete and consistent.</p>
   <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Proccess/1db vis.png" alt="Data Cleaning"><p>
   <p>Next was describing the data so that I could have some idea what I was working with. For example this SQL query is calculating the mode (most frequently occurring value) for several columns in the film table from a PostgreSQL database. The query uses the MODE() function within the GROUP BY clause to achieve this.</p>
   <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Proccess/2.png" alt="Data Cleaning"><p>
   <p>We can use this to find things like most popular film genre, longest movie, average movie rental, which genres contribute the most revenue, where are the most loyal customers and which are restrictions are the most popular.</p>
 
-  <h3>Results</h3>
+  <h2>Results</h2>
   <h4>High Customer and Payment Countries:</h4>
    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/1.png" alt="Data Cleaning"><p>  
     <ul>
@@ -102,6 +102,8 @@ image_url: '/img/posts/Rock Buster/rock  banner.png'
     <li>Geographic Diversity: These top spenders come from a wide range of locations, including Reunion, Belarus, Turkey, Mexico, Indonesia, United Kingdom, Ukraine, United States, Canada, and China, reflecting a broad geographic distribution of high-value customers.</li>
   </ul>
 
+  <h4>Sales by Genre</h4>
+  <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/4.png" alt="Data Cleaning"><p>
   <ul>
     <li>Top Selling Genres: Sports, Sci-Fi, and Animation are the top three genres with the highest total sales, indicating their popularity among customers.</li>
     <li>Moderate Selling Genres: Genres such as Comedy, Drama, Family, and Games show moderate total sales, ranging from approximately 3,750 to 4,118.</li>
@@ -109,7 +111,8 @@ image_url: '/img/posts/Rock Buster/rock  banner.png'
     <li>Sales Distribution: There is a noticeable gap between the highest selling genre (Sports with 4,892 sales) and the lowest selling genre (Thriller with 48 sales), showing a wide range of customer preferences.</li>
   </ul>
 
-  <h3>Recommendations</h3>
+  <h2>Recommendations</h2>
+ <p>
   <h4>Geographic Data Recommendations:</h4>
   <ul>
     <li>Focus on High Revenue Regions:
@@ -133,7 +136,6 @@ image_url: '/img/posts/Rock Buster/rock  banner.png'
   </ul>
 
   <h4>Rental Rate by NCPP Rating Recommendations:</h4>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Rock Buster/Visualisations/Results/4.png" alt="Data Cleaning"><p> 
    <ul>
       <li>Optimize Pricing for High Demand Ratings:
       <ul>
