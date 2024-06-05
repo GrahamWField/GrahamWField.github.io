@@ -1,179 +1,46 @@
 ---
 layout: post
-title: "Preparing for Influenza Season"
-subtitle: "Tools: Excel, Tableau Public"
-date: 2024-01-10 10:45:13 -0400
-background: '/img/posts/Influenza/Visualisations/Banner.png'
-image_url: '/img/posts/Influenza/Visualisations/Banner.png'
+title: "About Me"
+subtitle: "A Journey in Data Analytics"
+background: '/img/bg-about.jpg'
+image_url: '/img/bg-about.jpg'
 ---
 
 <head>
 </head>
 
 <body>
-  <h2>Introduction</h2>
-  <p>The annual influenza season in the United States poses significant challenges for healthcare providers. Vulnerable populations, such as young children and the elderly, are particularly at risk of developing severe complications from the flu, which often leads to increased hospitalizations. Medical staffing agencies play a crucial role in supporting hospitals and clinics by providing temporary staff to manage the surge in patients.</p>
+  <h2>About Me</h2>
+  <p>Hello! I'm <strong>Graham Field</strong>, a certified Data Analyst based in Rotterdam, The Netherlands. Beyond my professional life, I am passionate about the great outdoors and watersports, finding joy and exhilaration in activities like kayaking, sailing, and hiking. My love for nature is matched by my enthusiasm for gaming and computers, where I indulge my curiosity and continually seek out new challenges and knowledge.</p>
+  <p>Naturally inquisitive from a young age, I've always been eager to explore and understand the world around me. This curiosity fuels my work in data analytics, where I delve deep into data to uncover insights and solve complex problems. Whether navigating the open waters or decoding a challenging dataset, I approach each task with dedication and a desire to learn and grow.</p>
 
-  <h2>Objective</h2>
-  <p>The primary objective of this analysis is to determine the optimal timing and allocation of staff to hospitals across the United States during the influenza season.</p>
+  <h2>Background</h2>
+  <p>I was born in the vibrant and lively city of Johannesburg, where I spent my younger years attending Gryston Prep. It was here that my passion for sailing took root, and I dedicated myself to the sport, eventually achieving provincial colours. Growing up in such a dynamic city, I was surrounded by a diverse group of neighborhood friends, each contributing to a rich tapestry of experiences that shaped my formative years.</p>
+  <p>For high school, I attended the boarding school Saint Andrew's School in Bloemfontein. Steeped in tradition, Saint Andrew's provided a wide range of academic, cultural, and athletic opportunities. During my time there, I played rugby, hockey, cricket, and squash, and also participated in debating and chess, embracing the holistic education and vibrant community the school offered.</p>
+  <p>I then attended the University of the Free State for two years, pursuing a degree in Business & Marketing Management. However, I was soon drawn into the world of work, where I found my passion for practical application and hands-on experience, leading me to prioritize career development over academic pursuits.</p>
+  <p>In Johannesburg, I began my professional journey working in the luxury goods sector, specifically with the prestigious brand TAG Heuer at Picot and Moss. Here, I gained valuable experience in retail management, stock control, marketing, and training, which provided a solid foundation for my career.</p>
+  <p>Subsequently, I transitioned into entrepreneurship, focusing on community development and agriculture. I founded and managed Urban Fresh, a fresh produce business that aimed to empower local communities through sustainable agricultural practices and market access programs. This venture allowed me to expand customer and supplier networks, optimize logistics, and drive community development initiatives, ultimately fostering significant business growth and strengthened relationships within the community.</p>
+  <p>After several successful years in Johannesburg, I decided to move to Europe, specifically the Netherlands, with the intention of exploring Europe and developing a new chapter in my life. This move was also driven by a desire to be closer to family settled in the Netherlands. The rich cultural heritage and the vibrant opportunities in Europe have provided an ideal environment for both personal and professional growth.</p>
+  <p>Having thoroughly enjoyed the travel and freedom afforded by my role as a Wind Turbine Technician, I am now excited to settle down in the Netherlands and embark on a new chapter in data analytics.</p>
 
-  <h2>Scope</h2>
-  <p>The project encompasses all hospitals within the 50 states of the United States, focusing on the upcoming influenza season to ensure adequate staffing and resource distribution. By examining historical data and identifying trends, we aim to enhance preparedness and response strategies for healthcare facilities.</p>
+  <h2>Work Experience</h2>
+  <h3>Wind Turbine Technician - Team Lead</h3>
+  <p><strong>Rotorworks</strong> | Germany | 2019-Present</p>
+  <p>In Europe, I took on the role of Wind Turbine Technician with Rotorworks, specializing in blade repair. This position allowed me to travel extensively and enjoy a sense of freedom, working across various countries. As a team lead, I managed teams of 3 to 5 people, overseeing daily briefings, work planning, safety, and logistics for multinational teams. I implemented stringent safety protocols and efficiently handled logistics, including accommodation and material supply. Through meticulous planning and coordination, I enhanced productivity and safety standards, resulting in seamless project execution and significant improvements in operational efficiency.</p>
 
-  <h2>Key Research Questions</h2>
-  <ul>
-      <li>Provide information to support a staffing plan, detailing what data can help inform the timing and spatial distribution of medical personnel throughout the United States.</li>
-      <li>Determine whether influenza occurs seasonally or throughout the entire year. If seasonal, does it start and end at the same time (month) in every state?</li>
-      <li>Prioritize states with large vulnerable populations. Consider categorizing each state as low-, medium-, or high-need based on its vulnerable population count.</li>
-      <li>Assess data limitations that may prevent you from conducting your desired analyses.</li>
-  </ul>
+  <h3>Founder and Manager</h3>
+  <p><strong>Urban Fresh</strong> | Johannesburg, South Africa | 2017-2019</p>
+  <p>Driven by a desire to empower local communities, I founded and managed Urban Fresh, a fresh produce business in Johannesburg. This venture focused on sustainable agricultural practices and market access programs. I expanded customer and supplier networks, securing contracts with major corporate clients and scaling the customer base from 5 to 30 retailers. I optimized logistics systems and spearheaded community development initiatives, increasing community projects from 1 to 8. My efforts fostered significant business growth and strengthened relationships within the community.</p>
 
-  <section>
-    <h2>Step 1: Initial Data Exploration and Cleaning</h2>
-    <p>After drawing requirements from the stakeholders and the business requirements document I evaluated each data set. There were several considerations with the data namely: its reliability, ownership, and ethical concerns. I don't want to present any data that could lead to the identification of individuals, given the scope and scale of this medical data.</p>
-    <p>The focus of this was to send staff and allocate resources to areas which experience the greatest need. I focused on areas with the highest mortality rates.</p>
-    <p>From the 4 possible data sets I selected:</p>
-    <ul>
-      <li>US Geographical Census Data</li>
-      <li>US Influenza Deaths</li>
-    </ul>
-  </section>
+  <h3>Brand Manager</h3>
+  <p><strong>Picot and Moss (TAG Heuer)</strong> | Johannesburg, South Africa | 2011-2017</p>
+  <p>In the luxury goods sector, I worked with the prestigious brand TAG Heuer at Picot and Moss. Initially joining as a Sales Consultant, I was promoted to Brand Manager, overseeing retail management, stock control, marketing, and training for a network of 130 retailers. I addressed challenges in stock control, visual merchandising, and staff training to meet international brand standards. I developed and executed marketing campaigns to boost brand visibility and customer engagement, leading to consistent brand presence, sales growth, and expanded market share.</p>
 
-  <section>
-    <h2>Step 2: Cleaning and Consistency Checks</h2>
-    <p>During the exploration of the data I found several inconsistencies namely: the naming of states and areas which were recorded but not part of the US such as Puerto Rico.</p>
-    <p>There was some missing data due to privacy requirements where data that was less than 10 was removed. I imputed using both random and averaged methods. But ultimately chose the random seed.</p>
-
-  <section>
-    <h2>Step 3: Integration</h2>
-    <p>In order to use the data sets for analysis I had to integrate or merge them. This is due to the data sets often not being complete and ready for use.</p>
-    <p>I began by mapping the data and trying to find commonalities between the data sets. I identified “State” and “Year” as common columns. There was an issue with granularity as The US census data had state and county with year while the Influenza Deaths had State with Year and Month.</p>
-    <p>Now that I have a common key to work with, I created Pivot tables which summarized the data on both data sets and allowed me to integrate the two data sets. I used VLOOKUP to integrate the data sets into one.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/1.png" alt="Data Integration">
-    <p class="caption text-muted" style="text-align: center;">US Census Data</p>
-     <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/2.png" alt="Data Integration">
-  <p class="caption text-muted" style="text-align: center;">Influenza Deaths</p>
-  <p>Now that I have the data sets integrated I began to segment them into age groups of 10 years and then created a secondary segment for retired vs non-retired or younger than 65 and older than 65.</p>
- <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/3.png" alt="Data Integration">
-    <p class="caption text-muted" style="text-align: center;">US Census Data</p>
-  <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/4.png" alt="Data Integration">
-    <p class="caption text-muted" style="text-align: center;">Influenza Deats</p>
-  <p>Now that I had the two tables with matching data I could create a new normalised data table that would give me death rates by dividing the census data to the matching Influenza deaths.</p>
-  </section>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/5.png" alt="Data Integration">
-    <p class="caption text-muted" style="text-align: center;">Normalised data</p>
-   <h3>Analysis of the t-Tests</h3>
-  
-  <h3>Test 1: Deaths65+ vs. Census65+</h3>
-  <p><b>t Stat:</b> -19.2112299</p>
-  <p><b>P(T<=t) two-tail:</b> 9.25071E-61</p>
-  <p><b>t Critical two-tail:</b> 1.965157098</p>
-  <p>This test shows a highly significant difference between the mortality data for the 65+ age group and the census data for the same age group. However, this is not directly related to the null hypothesis about comparing mortality rates between age groups.</p>
-  
-  <h3>Test 2: Deaths 65- vs. Deaths65+</h3>
-  <p><b>t Stat:</b> -8.7088285</p>
-  <p><b>P(T<=t) two-tail:</b> 5.17089E-17</p>
-  <p><b>t Critical two-tail:</b> 1.964991997</p>
-  <p>This test directly compares the mean influenza mortality rates between the two age groups:</p>
-  <p><b>t Stat:</b> -8.7088285</p>
-  <p><b>t Critical two-tail:</b> 1.964991997</p>
-  <p><b>P(T<=t) two-tail:</b> 5.17089E-17</p>
-  
-  <h3>Conclusion</h3>
-  <p>The p-value for the second test (5.17089E-17) is extremely low, much lower than the typical significance level (α) of 0.05. This indicates that the difference in mean mortality rates between individuals aged 65 and older and those under 65 is statistically significant.</p>
-  
-  <h3>Decision</h3>
-  <p>Since the p-value is much less than 0.05, we reject the null hypothesis (H0).</p>
-  
-  <h3>Summary</h3>
-  <p>Based on the results of the t-test comparing the mortality rates between the two age groups, we have sufficient evidence to reject the null hypothesis. This indicates that there is a statistically significant difference in the mean influenza mortality rates between individuals aged 65 and older and those under 65.</p>
-
-    <section>
-    <h2>Step 4: Statistical Analysis and Testing</h2>
-    <p>I began by stating 2 hypotheses:</p>
-    <ul>
-      <li>Null Hypothesis (H0): The mean influenza mortality rate for individuals aged 65 and older is equal to the mean influenza mortality rate for individuals under 65.</li>
-      <li>Alternative Hypothesis (HA): The mean influenza mortality rate for individuals aged 65 and older is not equal to the mean influenza mortality rate for individuals under 65.</li>
-    </ul>
-    <p>The goal was to test whether the two groups had the same risk of death from influenza. The first test I ran was a statistical test to determine: Distribution, Standard Deviation, Number of outliers, and correlation. I wanted to determine if the average mortality rate was higher or lower for the two age groups.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/6.png" alt="Statistical Analysis">
-      <p>The next test I ran was the two-tail test because I was interested in confirming the results from the previous test and confirming or rejecting the null hypothesis with certainty. I decided to include both equal and unequal variance tests for the following reasons.</p>
-    <p>The first test shows the difference between the deaths in the 65+ age group and the overall census data for the 65+ population, highlighting the impact of influenza within this age group relative to its population size.</p>
-    <p>The second test directly compares the mortality rates between the two age groups, showing the disparity in influenza mortality between younger and older individuals.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/work proccess/7.png" alt="Statistical Analysis">
-
-  </section>
-<p>
-  <section>
-    <h2>Step 5: Visual Analysis</h2>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/Results/1b.png" alt="Defining Influenza">
-   <p>
-    <h3>Defining Influenza and Who Is at Risk?</h3>
-    <p>What is Influenza? Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. It can cause mild to severe illness and at times can lead to death. The flu spreads through respiratory droplets when people with the flu cough, sneeze, or talk.</p>
-    <p>Who is at Risk? Influenza significantly impacts certain age groups more than others. The most vulnerable age groups include:</p>
-    <ul>
-      <li>Children younger than 5 years old, with a mortality rate of 3.2%.</li>
-      <li>People over the age of 65 years, with an average mortality rate of 4.6%.</li>
-      <ul>
-        <li>65-74 years: 1.4% mortality rate</li>
-        <li>75-84 years: 3.7% mortality rate</li>
-        <li>85+ years: 8.7% mortality rate</li>
-      </ul>
-    </ul>
-    <p>Vulnerable Groups: The chart shows the death rates across various age groups, highlighting the higher risk among the very young and the elderly. These populations should be the focus of targeted interventions to reduce mortality rates during the influenza season.</p>
-  <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/Results/2b.png" alt="Defining Influenza">
-  </section>
-
-  <section>
-    <h3>Where and Who is at Risk?</h3>
-    <p>Geographical Analysis: The geographical distribution of influenza deaths shows significant variations. The top 15 states with the highest number of deaths include California, New York, Texas, Pennsylvania, and Florida, which are also among the most densely populated states.</p>
-    <p>Regional Deaths Geographically: Mapping the deaths geographically allows us to identify high-risk areas. This information is crucial for directing resources and planning healthcare strategies.</p>
-    <p>Total Deaths by Age Group: Analyzing the total deaths by age group reveals that older adults, especially those above 65, are at the highest risk. This demographic data is essential for preparing healthcare systems to meet the needs of these vulnerable populations.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/Results/3b.png" alt="Geographical Analysis">
-  </section>
-
-  <section>
-    <h3>When is Influenza Season?</h3>
-    <p>Influenza Seasonality: Influenza season typically starts in December, peaks in January, and declines by March. These months coincide with colder weather, which contributes to the spread of the virus.</p>
-    <p>State-specific Analysis: California, New York, and Texas have the highest number of deaths, correlating with their large populations. This trend underscores the need for targeted resource allocation during peak months.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/Results/4b.png" alt="Influenza Seasonality">
-    <p>Monthly Distribution of Deaths: Understanding the monthly distribution of deaths can help in planning the deployment of medical staff and resources. Ensuring that healthcare facilities are adequately staffed during peak months can save lives and improve patient outcomes.</p>
-    <img style="width: 100%; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/Influenza/Visualisations/Results/5b.png" alt="Influenza Seasonality">
-  </section>
-
-  <section>
-    <h2>Conclusion and Recommendations</h2>
-    <p>Conclusion: The analysis shows that certain age groups and geographical regions require more resources during the influenza season. Specifically, children under 5 and adults over 65 years need prioritized care due to higher mortality rates.</p>
-    <p>Recommendations:</p>
-    <ul>
-      <li>Prioritize Care for Vulnerable Age Groups: Ensure that resources are directed towards children under 5 and adults over 65.</li>
-      <li>Prepare for Seasonal Peaks: Staffing and resources should be heightened from December to March.</li>
-      <li>Allocate Resources to High-Risk States: States like California, New York, Texas, Pennsylvania, and Florida should receive the majority of resources. The next tier of states should receive moderate resources.</li>
-      <li>Enhance Public Health Campaigns: Increase awareness and vaccination efforts, particularly among high-risk groups and in high-risk states.</li>
-    </ul>
-    <p>Further Analysis: Future research should include additional data on vaccination rates, living standards, nutrition, and substance use to better understand the spread and survival rates of influenza. Collaboration with public health agencies can provide a more comprehensive approach to managing influenza seasons.</p>
-  </section>
-
-  <section>
-    <h2>Ongoing Monitoring and Data Limitations</h2>
-    <p>Ongoing Monitoring:</p>
-    <ul>
-      <li>Continue to track death rates over time to identify trends and emerging patterns.</li>
-      <li>Include comparisons between vaccinated and unvaccinated populations to assess the effectiveness of vaccination campaigns.</li>
-      <li>Assess how influenza deaths compare to other leading causes of death to allocate healthcare resources effectively.</li>
-    </ul>
-    <p>Data Limitations:</p>
-    <ul>
-      <li>Limited information on general health, fitness, diet, and hereditary factors can affect the analysis. More detailed health data could improve predictive models.</li>
-      <li>High-population density states with low death rates should be studied to identify effective health practices that could be implemented elsewhere.</li>
-      <li>Data quality and completeness are crucial; ensuring accurate reporting from healthcare facilities will enhance the reliability of future analyses.</li>
-    </ul>
-    <p>Assessment Recommendations:</p>
-    <ul>
-      <li>Regularly update and review data to reflect current trends.</li>
-      <li>Engage with local health departments to validate and supplement data.</li>
-      <li>Implement technological solutions to improve data collection and analysis.</li>
-    </ul>
-    <p>By addressing these limitations and continuing to monitor relevant data, we can improve our understanding of influenza patterns and enhance our preparedness for future seasons.</p>
-  </section>
+  <h2>Hobbies and Outlook</h2>
+  <p>When I'm not immersed in the world of data analytics, I love to spend my time outdoors, particularly around water. My hobbies include fishing, sailing, snorkeling, hiking, and visiting castles and museums, which allow me to connect with nature and enjoy its tranquility and beauty. These activities not only provide relaxation but also inspire me to maintain a balanced and healthy lifestyle.</p>
+  <p>When I cannot be outdoors, I indulge in other passions such as reading, cooking, gaming, and playing golf. Reading broadens my horizons and fuels my curiosity, while cooking allows me to explore creativity and enjoy the art of preparing delicious meals. Gaming provides a fun and engaging way to challenge my strategic thinking and unwind. Playing golf offers a perfect balance of physical activity and strategic challenge, enhancing my love for outdoor sports. Visiting castles and museums enriches my understanding of history and culture, satisfying my curiosity about the past.</p>
+  <p>As a South African, I also love to braai (barbecue) and socialize with friends. Braaiing is a cherished tradition that brings people together, allowing me to enjoy good food and great company, strengthening bonds with friends and family.</p>
+  <p>I am an optimist who believes in finding the opportunity in adversity. I approach challenges with a positive attitude, focusing on building constructively and turning difficult situations into opportunities for growth and improvement. This mindset not only helps me navigate personal and professional obstacles but also drives my continuous pursuit of excellence.</p>
+  <p>Being naturally curious and adventurous, I am always eager to explore new places and experiences. This curiosity fuels my professional pursuits as well, where I constantly seek to learn and grow. My outlook on life is one of continuous improvement and making a positive impact, whether through my work in data analytics or my interactions with the environment and community.</p>
+  <p>Thank you for visiting my portfolio. I look forward to sharing my journey and insights with you.</p>
 </body>
