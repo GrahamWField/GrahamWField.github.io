@@ -1,4 +1,4 @@
-# Welcome to Graham Field's Data Analytics Portfolio
+# Certified Data Analytics
 
 ## About Me
 Hello! I'm **Graham Field**, a certified Data Analyst based in Rotterdam, The Netherlands. With a diverse background spanning marketing, sales, procurement, supply chain management, logistics, and team management, I bring a wealth of experience and a unique perspective to the field of data analytics.
