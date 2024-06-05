@@ -11,7 +11,7 @@ layout: default
     transform: scale(1.1) /* scale the element to 110% of its original size on hover */ }
 </style>
 
- <!-- page Header -->
+<!-- page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
 {% else %}
@@ -22,8 +22,10 @@ layout: default
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
       <div class="page-heading">
-        <!-- Corrected image tag -->
-        <img style="border: 5px solid #555; border-radius: 50%; width: 200px; height: auto; display: block; margin: 0 auto;" class="img-fluid" src="img/posts/Profile pic.jpg" alt="Profile Picture">
+        <!-- Corrected image tag with zoom effect -->
+        <div style="overflow: hidden; width: 200px; height: 200px; margin: 0 auto;">
+          <img style="border: 5px solid #555; border-radius: 50%; width: 200px; height: auto; display: block; margin: 0 auto; transform: scale(3); transform-origin: center;" class="img-fluid" src="img/posts/Profile pic.jpg" alt="Profile Picture">
+        </div>
         <h1>{{ site.title }}</h1>
         {% if site.description %}
         <span class="subheading">{{ site.description }}</span>
@@ -33,6 +35,7 @@ layout: default
   </div>
 </div>
 </header>
+
 
 
   <div class="container">
