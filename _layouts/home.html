@@ -11,27 +11,29 @@ layout: default
     transform: scale(1.1) /* scale the element to 110% of its original size on hover */ }
 </style>
 
-  <!-- page Header -->
-  {% if page.background %}
-  <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-           <-- <image style="border: 5px solid #555; border radius: 50%: width:200px; height: auto; display: block; margin: 0 auto; class="image-fluid" src="img/posts/Profile pic.jpg" -->
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
-          </div>
-        </div>
+ <!-- page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+{% else %}
+<header class="masthead">
+{% endif %}
+<div class="overlay"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="page-heading">
+        <!-- Corrected image tag -->
+        <img style="border: 5px solid #555; border-radius: 50%; width: 200px; height: auto; display: block; margin: 0 auto;" class="img-fluid" src="img/posts/Profile pic.jpg" alt="Profile Picture">
+        <h1>{{ site.title }}</h1>
+        {% if site.description %}
+        <span class="subheading">{{ site.description }}</span>
+        {% endif %}
       </div>
     </div>
-  </header>
+  </div>
+</div>
+</header>
+
 
   <div class="container">
     <div class="row">
