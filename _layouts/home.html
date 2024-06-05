@@ -23,8 +23,8 @@ layout: default
     <div class="col-lg-8 col-md-10 mx-auto">
       <div class="page-heading">
         <!-- Corrected image tag with enhanced zoom effect, border, and round shape -->
-        <div style="overflow: hidden; width: 200px; height: 200px; border: 5px solid #555; border-radius: 50%; margin: 0 auto;">
-          <img style="width: 100%; height: 100%; display: block; transform: scale(4.5); transform-origin: center;" class="img-fluid" src="img/posts/Profile pic.jpg" alt="Profile Picture">
+        <div style="overflow: hidden; width: 200px; height: 200px; border: 5px solid #555; border-radius: 50%; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+          <img style="border-radius: 50%; width: auto; height: 300%; object-fit: cover;" class="img-fluid" src="img/posts/Profile pic.jpg" alt="Profile Picture">
         </div>
         <h1>{{ site.title }}</h1>
         {% if site.description %}
